@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Debajo puedes mantener tu estilo de body si quieres */
+body {
+  @apply bg-gray-950 text-slate-200 antialiased;
+}
