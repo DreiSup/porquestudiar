@@ -43,6 +43,7 @@ const modelId = process.env.MODEL_ID
         // Extract and print the response text.
         const responseText = response.output.message.content[0].text;
         console.log(responseText);
+        return responseText
       } catch (err) {
         console.log(`ERROR: Can't invoke '${modelId}'. Reason: ${err}`);
         throw err;

@@ -37,6 +37,8 @@ app.post('/api/chat', async (req, res) => {
             response: responseAI
         })
 
+        console.log("!!!   DEBUG   !!!: esto es responseAI:", responseAI)
+
     } catch (error) {
         console.error("Error en el endpoint /api/chat:", error)
 
