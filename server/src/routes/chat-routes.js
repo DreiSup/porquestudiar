@@ -9,7 +9,7 @@ chatRoutes.get('/health', (req, res) => {
 })
 
 //Ruta de prueba 
-chatRoutes.post('/api/chat', async (req, res, next) => {
+chatRoutes.post('/api/chat', async (req, res) => {
 
     const {message} = req.body;
 
