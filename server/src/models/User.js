@@ -34,7 +34,15 @@ const userSchema = new mongoose.Schema({
     chats: [chatSchema]
 })
 
-//implementa el userSchema.set que tienes de FSO y ten en cuenta para adelante hashear la password
+userSchema.set('toJSON', {
+    transform: (document, returnedObject) => {
+        returnedObject.id = returnedObject._id.toString()
+        //cambiamos id para que devuelva sin _, y borramos password para que no se revele
+        delete returnedObject._id
+        delete returnedObject.__v
+        delete returnedObject.passwordHash
+    }
+})
 
 
 export default mongoose.model('User', userSchema)
