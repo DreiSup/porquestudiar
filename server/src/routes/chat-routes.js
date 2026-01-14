@@ -3,13 +3,8 @@ import sendRequestBedrock from "../services/bedrockService.js"
 
 const chatRoutes = Router() 
 
-//Ruta para verifiacar la salud del server
-chatRoutes.get('/health', (req, res) => {
-    res.json({status: "ok", uptime: process.uptime()})
-})
-
 //Ruta de prueba 
-chatRoutes.post('/api/chat', async (req, res) => {
+chatRoutes.post('/', async (req, res) => {
 
     const {message} = req.body;
 

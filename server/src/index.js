@@ -11,7 +11,7 @@ connectToDatabase().then(() => {
         console.log(`
             Server open and connected to DB
             Endpoint: http://localhost:${PORT}/api/chat
-            IA: Amazon Bedrock (Converse API) active
+            IA: Amazon Bedrock (Converse API) active 
             `)
     })
 
