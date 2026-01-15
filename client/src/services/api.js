@@ -13,3 +13,14 @@ export const sendMessage = async (message, sessionId) => {
         throw error
     }
 }
+
+export const signUp = async (name, email, password) => {
+    
+        console.log(name, email, password)
+        const res = await api.post("/user/signup", {name, email, password});
+        if (res.status !== 201) {
+            throw new Error("Unable to Signup")
+        }
+        
+        return res
+    }
