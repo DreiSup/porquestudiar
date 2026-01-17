@@ -33,9 +33,9 @@ export const userSignUp = async (req, res) => {
     try {
         const {name, email, password} = req.body
         
-        if (password.length < 3){
+        /* if (password.length < 3){
             return res.status(400).json({error: "The password must be at least 3 characters long"})
-        }
+        } */
 
         const salt = genSaltSync(10)
         const passwordHash = hashSync(password, salt)
