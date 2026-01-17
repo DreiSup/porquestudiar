@@ -17,10 +17,18 @@ export const validate = (validations) => {
     }
 }
 
+export const loginValidator = [
+    body("email").trim().isEmail().withMessage("Email is required"),
+    body("password")
+        .trim()
+        .isLength({min: 3})
+        .withMessage("Password should contain at least 3 characters"),
+]
+
 export const signupValidator = [
     body("name").notEmpty().withMessage("Name is required"),
-    body("email").trim().isEmail().withMessage("Email is required"),
-    body("password").trim().isLength({min: 3}).withMessage("Password should contain at least 3 characters"),
+    ...loginValidator
 ]
+
 
 

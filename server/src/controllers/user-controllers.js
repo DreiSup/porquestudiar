@@ -32,10 +32,6 @@ export const userSignUp = async (req, res) => {
     //sign up user
     try {
         const {name, email, password} = req.body
-        
-        /* if (password.length < 3){
-            return res.status(400).json({error: "The password must be at least 3 characters long"})
-        } */
 
         const salt = genSaltSync(10)
         const passwordHash = hashSync(password, salt)
@@ -59,9 +55,9 @@ export const userSignUp = async (req, res) => {
 
 export const userLogIn = async (req, res) => {
     try {
-            const {name, password} = req.body
+            const {email, password} = req.body
     
-            const user = await User.findOne({name})
+            const user = await User.findOne({email})
             console.log(user)
     
             const passwordCorrect = user === null
@@ -69,17 +65,17 @@ export const userLogIn = async (req, res) => {
                 : await compare(password, user.passwordHash)
     
             if (!(user && passwordCorrect)) {
-                return res.status(401).json({ error: "invalid name or password", user})
+                return res.status(401).json({ error: "invalid email or password", user})
             }
     
             const userForToken = {
-                name: user.name,
+                email: user.email,
                 id: user._id
             }
     
             const token = jwt.sign(userForToken, process.env.JWT_SECRET)
     
-            res.status(200).send({token, user: user.name})
+            res.status(200).send({token, user: user.email})
     
         } catch (error) {
             console.log(error)
