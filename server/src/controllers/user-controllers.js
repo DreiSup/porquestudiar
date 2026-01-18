@@ -60,15 +60,15 @@ export const userLogIn = async (req, res) => {
             const user = await User.findOne({email})
             console.log(user)
     
-            const passwordCorrect = user === null
+            const isPasswordCorrect = user === null
                 ? false
                 : await compare(password, user.passwordHash)
     
-            if (!(user && passwordCorrect)) {
-                return res.status(401).json({ error: "invalid email or password", user})
+            if (!(user && isPasswordCorrect)) {
+                return res.status(401).json({ error: "invalid email or password"})
             }
     
-            const userForToken = {
+            const userForToken = {      
                 email: user.email,
                 id: user._id
             }
@@ -80,4 +80,4 @@ export const userLogIn = async (req, res) => {
         } catch (error) {
             console.log(error)
         }
-}
+} 

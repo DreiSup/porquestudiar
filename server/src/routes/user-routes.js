@@ -10,6 +10,4 @@ userRoutes.get("/:id", getUser)
 userRoutes.post("/signup", validate(signupValidator) , userSignUp)
 userRoutes.post("/login", validate(loginValidator), userLogIn)
 
-
-
 export default userRoutes

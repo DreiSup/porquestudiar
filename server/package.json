@@ -17,6 +17,7 @@
     "@aws-sdk/client-bedrock-agent-runtime": "^3.969.0",
     "@aws-sdk/client-bedrock-runtime": "^3.964.0",
     "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
