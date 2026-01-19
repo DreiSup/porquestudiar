@@ -1,6 +1,7 @@
 import User from "../models/User.js"
 import { genSaltSync, hashSync, compare} from "bcrypt"
-import jwt from "jsonwebtoken"
+import { createToken } from "../utils/token-manager.js"
+import { COOKIE_NAME } from "../utils/constants.js"
 
 export const getAllUsers = async (req, res) => {
     //get all users form DB
@@ -17,6 +18,7 @@ export const getAllUsers = async (req, res) => {
 
 export const getUser = async (req,res) => {
     try {
+        console.log("BACKEEEND")
         const user = await User.findById(req.params.id)
         
         console.log(user)
@@ -43,9 +45,29 @@ export const userSignUp = async (req, res) => {
             passwordHash
         })
 
-        const savedUser = await user.save()
+        await user.save()
 
-        return res.status(201).json(savedUser)
+        //create token and store cookie
+        res.clearCookie(COOKIE_NAME, {
+                path: "/",
+                domain:"localhost",
+                httpOnly: true,
+                signed: true
+            })
+
+        const token = createToken(user._id.toString(), user.email, "7d")
+        const expires = new Date()
+        expires.setDate(expires.getDate() + 7)
+        //cambiar esto en caso de deploy
+        res.cookie(COOKIE_NAME, token, {
+            path: "/",
+            domain:"localhost",
+            expires:"",
+            httpOnly: true,
+            signed: true
+        })
+
+        return res.status(201).json({mesage: "OK", name: user.name, email: user.email })
 
     } catch (error) {
         console.log(error)
@@ -67,15 +89,27 @@ export const userLogIn = async (req, res) => {
             if (!(user && isPasswordCorrect)) {
                 return res.status(401).json({ error: "invalid email or password"})
             }
+
+            res.clearCookie(COOKIE_NAME, {
+                path: "/",
+                domain:"localhost",
+                httpOnly: true,
+                signed: true
+            })
     
-            const userForToken = {      
-                email: user.email,
-                id: user._id
-            }
+            const token = createToken(user._id.toString(), user.email, "7d")
+            const expires = new Date()
+            expires.setDate(expires.getDate() + 7)
+            //cambiar esto en caso de deploy
+            res.cookie(COOKIE_NAME, token, {
+                path: "/",
+                domain:"localhost",
+                expires:"",
+                httpOnly: true,
+                signed: true
+            })
     
-            const token = jwt.sign(userForToken, process.env.JWT_SECRET)
-    
-            res.status(200).send({token, user: user.email})
+            res.status(200).send({message: "Login OK",token, user: user.email})
     
         } catch (error) {
             console.log(error)

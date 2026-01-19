@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { signUp } from '../services/api'
+import { signupUser } from '../services/api'
 
 const SignUp = () => {
     const [error, setError] = useState("")
@@ -27,7 +27,7 @@ const SignUp = () => {
         }
 
         try {
-            const response = await signUp(formData.name, formData.email, formData.password);
+            const response = await signupUser(formData.name, formData.email, formData.password);
             console.log(response)
             if (response.status == 201) {
                 navigate('/login')
@@ -39,7 +39,7 @@ const SignUp = () => {
 
   return (
     <div className='min-h-screen bg-gray-950 flex flex-col justify-center items-center p-4'>
-        klk
+        signup page
         <div className='className="w-full max-w-md bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-xl'>
 
             {error && (

@@ -1,7 +1,10 @@
 import axios from 'axios'
+const PORT = import.meta.env.VITE_PORT
+
+const baseUrl = `http://localhost:${PORT}/api`
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000/api'
+    baseURL: baseUrl
 });
 
 export const sendMessage = async (message, sessionId) => {
@@ -14,12 +17,24 @@ export const sendMessage = async (message, sessionId) => {
     }
 }
 
-export const signUp = async (name, email, password) => {
+export const signupUser = async (name, email, password) => {
     
         console.log(name, email, password)
         const res = await api.post("/user/signup", {name, email, password});
         if (res.status !== 201) {
             throw new Error("Unable to Signup")
+        }
+        
+        return res
+    }
+
+export const loginUser = async (email, password) => {
+    
+        console.log(email, password)
+        console.log(baseUrl)
+        const res = await api.post("/user/login", {email, password});
+        if (res.status !== 200) {
+            throw new Error("Unable to login")
         }
         
         return res
