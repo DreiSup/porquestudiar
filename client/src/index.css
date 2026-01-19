@@ -1,6 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Debajo puedes mantener tu estilo de body si quieres */
 body {
-  @apply bg-gray-950 text-slate-200 antialiased;
+  padding: 0;
+  margin: 0;
+  background: #000000;
+  font-family: "Open Sans";
 }
