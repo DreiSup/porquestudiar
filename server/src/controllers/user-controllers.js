@@ -115,3 +115,14 @@ export const userLogIn = async (req, res) => {
             console.log(error)
         }
 } 
+
+
+/* export const userLogout = async () => {
+    try {
+        const {}
+
+        const user = User.findById({})
+    } catch (error) {
+        console.log(error)
+    }
+} */
