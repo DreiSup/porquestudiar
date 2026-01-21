@@ -1,7 +1,8 @@
 import { createContext } from "react";
-import { loginUser, logoutUser, signupUser } from "../services/api";
+import { checkAuthStatus, loginUser, logoutUser, signupUser } from "../services/api";
 import { useContext } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 /* const User = {
@@ -23,6 +24,19 @@ export const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
+    useEffect(() => {
+        async function checkStatus() {
+            const data = await checkAuthStatus()
+            if (data) {
+            setUser({email: data.email, password: data.password})
+            setIsLoggedIn(true)
+            } 
+        }
+        checkStatus()
+    }, [])
+
 
     const login = async (email, password) => {
         const data = await loginUser(email, password)

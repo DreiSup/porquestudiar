@@ -41,15 +41,27 @@ export const loginUser = async (email, password) => {
         return res
     }
 
-    export const logoutUser = async () => {
+export const logoutUser = async () => {
 
-        console.log("Trying to logout user...")
-        const res = await api.post("/user/logout")
-        
-        if (res.status !== 200) {
-            throw new Error("Unable to logout user")
-        } 
-                    
-        const data = await res.data
-        console.log(data)
-    }
+    console.log("Trying to logout user...")
+    const res = await api.post("/user/logout")
+    
+    if (res.status !== 200) {
+        throw new Error("Unable to logout user")
+    } 
+                
+    const data = await res.data
+    console.log(data)
+}
+
+export const checkAuthStatus = async () => {
+
+    const res = await api.get("/user/auth-status")
+    
+    if (res.status !== 200) {
+        throw new Error("Unable to authenticate")
+    } 
+                
+    const data = await res.data
+    return data
+}

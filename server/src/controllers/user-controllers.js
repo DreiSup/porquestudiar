@@ -128,3 +128,13 @@ export const userLogIn = async (req, res) => {
         console.log(error)
     }
 } */
+
+
+export const verifyUser = async (req, res) => {
+    try {
+        const user = await User.findById()
+        console.log(user)
+    } catch (error) {
+        console.log(error)
+    }
+}
