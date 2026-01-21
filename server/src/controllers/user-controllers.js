@@ -62,7 +62,7 @@ export const userSignUp = async (req, res) => {
         res.cookie(COOKIE_NAME, token, {
             path: "/",
             domain:"localhost",
-            expires:"",
+            expires: expires,
             httpOnly: true,
             signed: true
         })
@@ -92,7 +92,7 @@ export const userLogIn = async (req, res) => {
 
             res.clearCookie(COOKIE_NAME, {
                 path: "/",
-                domain:"localhost",
+                /* domain:"localhost", */
                 httpOnly: true,
                 signed: true
             })
@@ -103,12 +103,13 @@ export const userLogIn = async (req, res) => {
             //cambiar esto en caso de deploy
             res.cookie(COOKIE_NAME, token, {
                 path: "/",
-                domain:"localhost",
-                expires:"",
+                /* domain:"localhost", */
+                expires: expires,
                 httpOnly: true,
                 signed: true
             })
     
+            console.log(res.cookie)
             res.status(200).send({message: "Login OK",token, user: user.email})
     
         } catch (error) {
@@ -117,11 +118,12 @@ export const userLogIn = async (req, res) => {
 } 
 
 
-/* export const userLogout = async () => {
+/* export const userLogout = async (req, res) => {
     try {
-        const {}
-
+    
         const user = User.findById({})
+        
+    
     } catch (error) {
         console.log(error)
     }

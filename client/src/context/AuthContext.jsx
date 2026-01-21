@@ -1,5 +1,7 @@
-/* import { createContext } from "react";
-import { loginUser, signupUser } from "../services/api"; */
+import { createContext } from "react";
+import { loginUser, logoutUser, signupUser } from "../services/api";
+import { useContext } from "react";
+import { useState } from "react";
 
 
 /* const User = {
@@ -15,9 +17,9 @@ const UserAuth = {
 
 } */
 
-/* const AuthContext = createContext(null)
+const AuthContext = createContext(null)
 
-const AuthProvider = ({children}) => {
+export const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,7 +35,7 @@ const AuthProvider = ({children}) => {
     const signup = async (name, email, password) => {
         const data = await signupUser(name, email, password)
         if (data) {
-            setUser({email: data.email, password: data.password})
+            setUser({email: data.email, name: data.name})
             setIsLoggedIn(true)
         } 
     }
@@ -42,4 +44,15 @@ const AuthProvider = ({children}) => {
         await logoutUser()
     }
 
-} */
+    const value = {
+        user,
+        isLoggedIn,
+        login,
+        signup,
+        logout
+    }
+
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
+}
+
+export const useAuth = () => useContext(AuthContext);
