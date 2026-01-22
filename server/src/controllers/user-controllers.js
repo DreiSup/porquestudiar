@@ -117,24 +117,45 @@ export const userLogIn = async (req, res) => {
         }
 } 
 
-
-/* export const userLogout = async (req, res) => {
-    try {
-    
-        const user = User.findById({})
-        
-    
-    } catch (error) {
-        console.log(error)
-    }
-} */
-
-
 export const verifyUser = async (req, res) => {
     try {
-        const user = await User.findById()
-        console.log(user)
+        const user = await User.findById(res.locals.jwtData.id)
+        if (!user) {
+            return res.status(401).send("User not registered or Token malfunctioned")
+        }
+        if (user._id.toString() !== res.locals.jwtData.id) {
+            return res.status(401).send("Permisions did not match")
+        }
+        return res
+        .status(200)
+        .json({message: "OK", name: user.name, email: user.email })
     } catch (error) {
         console.log(error)
+        return res.status(200).json({message: "error", cause: error.message})
+    }
+}
+
+export const userLogout = async (req, res) => {
+    try {
+    
+        const user = await User.findById(res.locals.jwtData.id)
+        console.log("USER: ",user)
+        if (!user) {
+            return res.status(401).send("User not registered or Token malfunctioned")
+        }
+        if (user._id.toString() !== res.locals.jwtData.id) {
+            return res.status(401).send("Permission did not match")
+        }
+        res.clearCookie(COOKIE_NAME, {
+            path: "/",
+            /* domain:"localhost", */
+            httpOnly: true,
+            signed: true
+        })
+    
+        return res.status(200).json({message: `User : ${user} logged out`})
+    } catch (error) {
+        console.log(error)
+        return res.status(200).json({ message: "ERROR", cause: error.message})
     }
 }

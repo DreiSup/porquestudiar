@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef} from 'react';
-import { sendMessage } from '../services/api.js';
+import { logoutUser, sendMessage } from '../services/api.js';
+import Button from '@mui/material/Button';
+import { useAuth } from '../context/AuthContext.jsx';
 
 
 function Chat() {
@@ -19,6 +21,17 @@ function Chat() {
       useEffect(() => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth"})
       })
+
+      const handleLogOut = async (e) => {
+        e.preventDefault()
+
+        try {
+          const res = await logoutUser()
+          return res
+        } catch (error) {
+          console.log(error)        
+        }
+      }
     
       const send = async (e) => {
         e.preventDefault()
@@ -62,10 +75,17 @@ function Chat() {
       return (
         <>
           <div className="flex flex-col h-screen bg-gray-950 text-gray-100 font-sans">
-            <header className="p-4 border-b border-gray-800 text-center bg-gray-900">
+            <header className="flex justify-around p-4 border-b border-gray-800 text-center bg-gray-900">
               <h2 className="text-xl font-bold text-amber-500 tracking-tighter uppercase">
                 PorquéEstudiar <span className="text-gray-400 text-xs italic">by ysst</span>
               </h2>
+              
+              
+              <Button variant="outlined"
+                onClick={handleLogOut}
+              >
+                Logout
+              </Button>
             </header>
     
             <main className='flex-1 overflow-y-auto p-4 md:p-10 space-y-4'>

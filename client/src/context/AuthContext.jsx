@@ -28,11 +28,17 @@ export const AuthProvider = ({children}) => {
 
     useEffect(() => {
         async function checkStatus() {
-            const data = await checkAuthStatus()
-            if (data) {
-            setUser({email: data.email, password: data.password})
-            setIsLoggedIn(true)
-            } 
+            try {
+                const data = await checkAuthStatus()
+                if (data) {
+                setUser({name: data.name, email: data.email})
+                setIsLoggedIn(true)
+                } 
+            } catch (error) {
+                console.log("Sesión no válida o expirada", error)
+                setIsLoggedIn(false)
+                setUser(null)
+            }
         }
         checkStatus()
     }, [])
