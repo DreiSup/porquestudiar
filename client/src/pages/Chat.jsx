@@ -11,11 +11,15 @@ function Chat() {
       const [isLoading, setIsLoading] = useState(false)
     
       const [sessionId, setSessionId] = useState("")
+
+      const auth = useAuth()
     
       useEffect(() => {
         const uniqueId = `sesion-${crypto.randomUUID()}`
         setSessionId(uniqueId);
         console.log("SessionID generado: ", uniqueId)
+
+        console.log("ESTO ES LO QUE CONTIENE AUTH:", auth)
       }, [])
     
       useEffect(() => {
@@ -80,12 +84,22 @@ function Chat() {
                 PorquéEstudiar <span className="text-gray-400 text-xs italic">by ysst</span>
               </h2>
               
+              {auth?.isLoggedIn ? (
+                <>
+                <div className='grid grid-flow-col gap-5'>
+                  <p>{auth?.user.name}</p>
+                  <Button variant="outlined"
+                    onClick={handleLogOut}
+                  >
+                    Logout
+                  </Button>
+                </div>
+                </>
+              )
               
-              <Button variant="outlined"
-                onClick={handleLogOut}
-              >
-                Logout
-              </Button>
+              : <></>}
+              
+              
             </header>
     
             <main className='flex-1 overflow-y-auto p-4 md:p-10 space-y-4'>

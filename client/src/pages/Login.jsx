@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { loginUser } from '../services/api.js'
+import { useAuth } from '../context/AuthContext'
+import { useEffect } from 'react'
 
 const LogIn = () => {
     const [error, setError] = useState("")
@@ -8,6 +9,8 @@ const LogIn = () => {
         email: "",
         password: "",
     })
+
+    const auth = useAuth()
     const navigate = useNavigate()
 
     const handleChange = (e) => {
@@ -21,17 +24,25 @@ const LogIn = () => {
         console.log("froooontendd")
 
         try {
-            console.log("1")
-            const response = await loginUser(formData.email, formData.password);
-            console.log("2")
-            console.log(response)
-            if (response.status == 200) {
-                navigate('/chat')
+
+            const res = await auth?.login(formData.email, formData.password);
+
+            if (res) {
+                navigate("/chat")
+            } else {
+                setError("Credenciales incorrectas")
             }
+
         } catch (error) {
             console.log("Ha habido un error al registrarte: ", error)
         }
     }
+
+    /* useEffect(() => {
+        if (auth?.user) {
+            return navigate("/chat")
+        }
+    }, [auth, navigate]) */
 
   return (
     <div className='min-h-screen bg-gray-950 flex flex-col justify-center items-center p-4'>

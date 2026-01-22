@@ -12,12 +12,12 @@ axios.defaults.withCredentials = true;
 const theme = createTheme({typography:{fontFamily:"Open Sans"}})
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <ThemeProvider theme={theme}>
           <App />
         </ThemeProvider>
-      </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </BrowserRouter>
   </StrictMode>,
 )

@@ -22,26 +22,37 @@ const AuthContext = createContext(null)
 
 export const AuthProvider = ({children}) => {
 
+    const [loading, setLoading] = useState(false)
     const [user, setUser] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-
 
     useEffect(() => {
         async function checkStatus() {
             try {
+                setLoading(false)
                 const data = await checkAuthStatus()
+                console.log(data.name)
                 if (data) {
                 setUser({name: data.name, email: data.email})
                 setIsLoggedIn(true)
                 } 
+                console.log(user);
+                
             } catch (error) {
                 console.log("Sesión no válida o expirada", error)
                 setIsLoggedIn(false)
                 setUser(null)
+            } finally {
+                setLoading(false)
             }
         }
         checkStatus()
     }, [])
+
+    useEffect(() => {
+        console.log("user ha cambiado", user);
+        
+    }, [user])
 
 
     const login = async (email, password) => {
@@ -49,7 +60,9 @@ export const AuthProvider = ({children}) => {
         if (data) {
             setUser({email: data.email, password: data.password})
             setIsLoggedIn(true)
+            return data
         }
+        return null
     }
     
     const signup = async (name, email, password) => {
@@ -69,7 +82,8 @@ export const AuthProvider = ({children}) => {
         isLoggedIn,
         login,
         signup,
-        logout
+        logout,
+        loading
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
