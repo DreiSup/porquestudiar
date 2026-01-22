@@ -1,20 +1,18 @@
 import mongoose from "mongoose";
 import {randomUUID} from 'crypto'
 
+const messageSchema =new mongoose.Schema({
+    role: {type: String, required: true},
+    content: {type: String, required: true}
+})
+
 const chatSchema = new mongoose.Schema({
     id: {
         type: String,
-        default: randomUUID
+        default: () => randomUUID
     },
-    role: {
-        type: String,
-        required: true
-    },
-    content: {
-        //esto es el message
-        type: String,
-        required: true
-    },
+    title: {type: String, required: true},
+    messages: [messageSchema]
 });
 
 const userSchema = new mongoose.Schema({
@@ -31,7 +29,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    chats: [chatSchema]
+    chats: {type: [chatSchema], default: []}
 })
 
 userSchema.set('toJSON', {

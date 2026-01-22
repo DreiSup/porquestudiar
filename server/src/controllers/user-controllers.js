@@ -159,3 +159,22 @@ export const userLogout = async (req, res) => {
         return res.status(200).json({ message: "ERROR", cause: error.message})
     }
 }
+
+
+
+
+
+
+
+
+// DANGER ZONE
+
+export const deleteAllUsers = async (req, res) => {
+    try {
+        await User.deleteMany({})
+
+        return res.status(200).json({message: "All users have been deleted"})
+    } catch (error) {
+        return res.status(500).json({ message: "Something went wrong trying to delete all users", error: error.message})
+    }
+}

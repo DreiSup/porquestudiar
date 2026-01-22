@@ -18,9 +18,11 @@ function Chat() {
         const uniqueId = `sesion-${crypto.randomUUID()}`
         setSessionId(uniqueId);
         console.log("SessionID generado: ", uniqueId)
-
-        console.log("ESTO ES LO QUE CONTIENE AUTH:", auth)
       }, [])
+      
+      useEffect(() => {
+        console.log("Esto es lo que contiene auth:", auth);
+      }, [auth])
     
       useEffect(() => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth"})

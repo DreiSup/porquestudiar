@@ -1,40 +1,11 @@
 import { Router } from "express";
-import {invokeAgent} from "../services/bedrockAgentService.js" 
+/* import {invokeAgent} from "../services/bedrockAgentService.js"  */
+import { postMessage } from "../controllers/chat-controllers.js";
 
 const chatRoutes = Router() 
 
 //Ruta de prueba 
-chatRoutes.post('/', async (req, res) => {
-
-    const {message, sessionId} = req.body;
-
-    if (!message) {
-        return res.status(400).json({ error: "Algo ha ido mal con el mensaje"})
-    }
-
-    try {
-        console.log(`[LOG] Procesandi pregunta: "${message}"`)
-        
-        //Llamamos al servicio de Bedrock, y responde
-        const responseAI = await invokeAgent(message, sessionId);
-
-        //Devolvemos la respuesta de Bedrock
-        res.json({
-            ok: true,
-            response: responseAI
-        })
-
-        console.log("!!!   DEBUG   !!!: esto es responseAI:", responseAI)
-
-    } catch (error) {
-        console.error("Error en el endpoint /api/chat:", error)
-
-        res.status(500).json({
-            ok: false,
-            error: "Ha habido un problema al intentar conectar con el Agente"
-        })
-    }
-});
+chatRoutes.post('/', postMessage)
 
 
 export default chatRoutes
