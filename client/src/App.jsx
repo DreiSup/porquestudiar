@@ -18,8 +18,8 @@ function App() {
   console.log(auth.isLoggedIn)
   
   return (
-      <main className="flex-1 flex flex-col min-h-screen min-w-0 bg-slate-950">
-        <NavBar />
+      <main className="flex-1 flex flex-col min-h-screen min-w-0 bg-slate-950 dark">
+        {/* <NavBar /> */}
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/signup' element={<SignUp/>}/>

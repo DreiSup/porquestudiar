@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef} from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { sendMessage } from '@/services/api.js';
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar.jsx';
+import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar.jsx';
 import SideBar from '@/components/SideBar.jsx';
+import ChatHeader from '@/components/ChatHeader.jsx';
 
 
 function Chat() {
@@ -74,71 +75,75 @@ function Chat() {
       return (
         <SidebarProvider>
           <SideBar/>
-          <main className="flex-1 flex flex-col h-screen min-w-0">
-            <div className="flex flex-col h-screen bg-gray-950 text-gray-100 font-sans">
-              <header className="flex justify-around p-4 border-b border-gray-800 text-center bg-gray-900">
-              <SidebarTrigger />
-                <h2 className="text-xl font-bold text-amber-500 tracking-tighter uppercase">
-                  PorquéEstudiar <span className="text-gray-400 text-xs italic">by ysst</span>
-                </h2>
-              </header>
-      
-              <main className='flex-1 overflow-y-auto p-4 md:p-10 space-y-4'>
-                {messages.map((msg, index) => {
-                  const isUser = msg.role === "user";
-                  return (
-                    <div key={index}
-                      className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}
-                    >
-                      <div className={`max-w-[75%] p-3 rounded-2xl shadow-md my-3 ${
-                        isUser
-                          ? 'bg-amber-700 text-white rounded-br-none'
-                          : 'bg-gray-800 text-gray-200 border border-gray-700 rounded-bl-none'
-                      }`}>
-                        <p className='text-sm whitespace-pre-wrap'>
-                          {msg.content[0].text}
-                        </p>
-                      </div>
-                    </div>
-                  )
-                })}
-      
-                {/* --- INDICADOR DE CARGA (TRES PUNTOS) --- */}
-                  {isLoading && (
-                    <div className="flex justify-start">
-                      <div className="bg-gray-800 border border-gray-700 p-4 rounded-2xl rounded-bl-none shadow-md">
-                        <div className="flex gap-1.5 items-center">
-                          {/* Animación de puntos usando Tailwind */}
-                          <div className="w-2 h-2 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                          <div className="w-2 h-2 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                          <div className="w-2 h-2 bg-amber-500 rounded-full animate-bounce"></div>
+
+          <SidebarInset className="flex flex-col flex-1 h-screen bg-slate-950">
+          <ChatHeader/>
+
+            <main className="flex-1 flex flex-col h-screen min-w-0">
+              <div className="flex flex-col h-screen bg-gray-950 text-gray-100 font-sans">
+                <header className="flex justify-around p-4 border-b border-gray-800 text-center bg-gray-900">
+                  <h2 className="text-xl font-bold text-amber-500 tracking-tighter uppercase">
+                    PorquéEstudiar <span className="text-gray-400 text-xs italic">by ysst</span>
+                  </h2>
+                </header>
+        
+                <div className='flex-1 overflow-y-auto p-4 md:p-10 space-y-4'>
+                  {messages.map((msg, index) => {
+                    const isUser = msg.role === "user";
+                    return (
+                      <div key={index}
+                        className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}
+                      >
+                        <div className={`max-w-[75%] p-3 rounded-2xl shadow-md my-3 ${
+                          isUser
+                            ? 'bg-amber-700 text-white rounded-br-none'
+                            : 'bg-gray-800 text-gray-200 border border-gray-700 rounded-bl-none'
+                        }`}>
+                          <p className='text-sm whitespace-pre-wrap'>
+                            {msg.content[0].text}
+                          </p>
                         </div>
                       </div>
-                    </div>
-                  )}
-      
-                <div ref={chatEndRef} />
-              </main>
-      
-              {/* INPUT */}
-              <footer className="p-4 bg-gray-900 border-t border-gray-800">
-                <form className='max-w-4xl mx-auto flex gap-2'
-                  onSubmit={send}
-                >
-                  <input type="text" 
-                    className='flex-1 bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-all' 
-                    value={input} 
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder='Escribe algo...' 
-                  />
-                  <button type='submit'
-                    className='bg-amber-700 hover:bg-amber-600 px-6 py-3 rounded-xl font-bold transition-transform active:scale-95' >
-                    Enviar
-                  </button>
-                </form>
-              </footer>
-            </div>
-          </main>
+                    )
+                  })}
+        
+                  {/* --- INDICADOR DE CARGA (TRES PUNTOS) --- */}
+                    {isLoading && (
+                      <div className="flex justify-start">
+                        <div className="bg-gray-800 border border-gray-700 p-4 rounded-2xl rounded-bl-none shadow-md">
+                          <div className="flex gap-1.5 items-center">
+                            {/* Animación de puntos usando Tailwind */}
+                            <div className="w-2 h-2 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                            <div className="w-2 h-2 bg-amber-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                            <div className="w-2 h-2 bg-amber-500 rounded-full animate-bounce"></div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+        
+                  <div ref={chatEndRef} />
+                </div>
+        
+                {/* INPUT */}
+                <footer className="p-4 bg-gray-900 border-t border-gray-800">
+                  <form className='max-w-4xl mx-auto flex gap-2'
+                    onSubmit={send}
+                  >
+                    <input type="text" 
+                      className='flex-1 bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-all' 
+                      value={input} 
+                      onChange={(e) => setInput(e.target.value)}
+                      placeholder='Escribe algo...' 
+                    />
+                    <button type='submit'
+                      className='bg-amber-700 hover:bg-amber-600 px-6 py-3 rounded-xl font-bold transition-transform active:scale-95' >
+                      Enviar
+                    </button>
+                  </form>
+                </footer>
+              </div>
+            </main>
+          </SidebarInset>
         </SidebarProvider>
 
       );
