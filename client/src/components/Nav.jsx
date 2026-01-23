@@ -9,19 +9,38 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useAuth } from '@/context/AuthContext'
+import { logoutUser } from '@/services/api'
 
 
 const NavBar = () => {
 
+  const auth = useAuth()
+
+  console.log("ESTO ES AUTH DESDE NAVBAR: ", auth)
+
+  const handleLogOut = async (e) => {
+        e.preventDefault()
+
+        try {
+          const res = await logoutUser()
+          return res
+        } catch (error) {
+          console.log(error)        
+        }
+      }
   
 
   return (
     <>
+
+    {auth?.isLoggedIn 
+    ? 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="icon" className="rounded-full">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
+              <AvatarImage src={auth?.user.profilePic} alt="shadcn" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </Button>
@@ -34,10 +53,13 @@ const NavBar = () => {
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem variant="destructive">Log out</DropdownMenuItem>
+            <DropdownMenuItem className="text-red-500 focus:bg-red-900/20 focus:text-red-500"
+              onClick={handleLogOut}
+              variant="destructive">Log out</DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>
+    : <></>}
     </>
   )
 }

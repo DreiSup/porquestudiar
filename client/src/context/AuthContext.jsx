@@ -30,9 +30,9 @@ export const AuthProvider = ({children}) => {
         async function checkStatus() {
             try {
                 const data = await checkAuthStatus()
-                console.log(data.name)
+                console.log(data)
                 if (data) {
-                setUser({name: data.name, email: data.email})
+                setUser({name: data.name, email: data.email, profilePic: data.profilePic})
                 setIsLoggedIn(true)
                 } 
                 console.log(user);
