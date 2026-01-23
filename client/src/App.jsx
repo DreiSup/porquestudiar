@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import ChatOnBuild from './pages/ChatOnBuild';
 import { useAuth } from './context/AuthContext';
 import Experiment from './pages/Experiment';
+import NavBar from './components/Nav';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
   
   return (
     <main>
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/signup' element={<SignUp/>}/>

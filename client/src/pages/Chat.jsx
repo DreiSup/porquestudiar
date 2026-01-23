@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef} from 'react';
 import { logoutUser, sendMessage } from '../services/api.js';
-import Button from '@mui/material/Button';
 import { useAuth } from '../context/AuthContext.jsx';
 
 
@@ -57,6 +56,7 @@ function Chat() {
           if (res.ok) {
             const aiMsg = { role: "assistant", content: [{ text: res.response }] }
             setMessages((prev) => [...prev, aiMsg])
+            setIsLoading(false)
           }
     
           //Debug
@@ -90,11 +90,9 @@ function Chat() {
                 <>
                 <div className='grid grid-flow-col gap-5'>
                   <p>{auth?.user.name}</p>
-                  <Button variant="outlined"
-                    onClick={handleLogOut}
-                  >
+                  <button onClick={handleLogOut}>
                     Logout
-                  </Button>
+                  </button>
                 </div>
                 </>
               )

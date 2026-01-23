@@ -178,3 +178,11 @@ export const deleteAllUsers = async (req, res) => {
         return res.status(500).json({ message: "Something went wrong trying to delete all users", error: error.message})
     }
 }
+
+export const deleteUser = async (req, res) => {
+    try {
+        console.log(res.locals)
+    } catch (error) {
+        console.log(error)
+    } 
+}

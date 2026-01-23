@@ -29,7 +29,6 @@ export const AuthProvider = ({children}) => {
     useEffect(() => {
         async function checkStatus() {
             try {
-                setLoading(false)
                 const data = await checkAuthStatus()
                 console.log(data.name)
                 if (data) {
@@ -85,6 +84,8 @@ export const AuthProvider = ({children}) => {
         logout,
         loading
     }
+
+    console.log("Estado actual - Loading:", loading, "isLoggedIn:", isLoggedIn);
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

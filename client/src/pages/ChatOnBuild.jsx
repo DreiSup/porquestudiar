@@ -1,18 +1,5 @@
 import { useState, useEffect, useRef} from 'react';
 import { sendMessage } from '../services/api.js';
-import { 
-  Box, 
-  Drawer, 
-  List, 
-  ListItem, 
-  ListItemButton, 
-  ListItemIcon, 
-  ListItemText, 
-  IconButton, 
-  Typography, 
-  Divider,
-  Button
-} from '@mui/material';
 import { HiMenuAlt2, HiPlus, HiChatAlt2, HiUserCircle } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
