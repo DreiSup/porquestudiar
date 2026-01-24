@@ -15,7 +15,7 @@ export const createNewChat = async () => {
     }
 } 
 
-export const sendMessage = async (message, sessionId) => {
+export const sendChatMessage = async (message, sessionId) => {
     try{
         const response = await api.post('/chat', { message: message, sessionId: sessionId })
         return response.data

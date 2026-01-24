@@ -33,7 +33,7 @@ const LogIn = (className, ...props) => {
       e.preventDefault();
       setError("")
 
-      console.log("froooontendd")
+      console.log("handleSubmit for Login")
 
       try {
 

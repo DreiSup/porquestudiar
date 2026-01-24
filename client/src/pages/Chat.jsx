@@ -1,75 +1,51 @@
 import { useState, useEffect, useRef} from 'react';
-import { useAuth } from '../context/AuthContext.jsx';
 import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar.jsx';
 import SideBar from '@/components/SideBar.jsx';
 import ChatHeader from '@/components/ChatHeader.jsx';
-import { sendMessage } from '@/services/chat-api.js';
+import { useChat } from '@/context/ChatContext.jsx';
 
 
 function Chat() {
     const [input, setInput] = useState("");
-      const [messages, setMessages] = useState([]);
       const chatEndRef = useRef(null)
-      const [isLoading, setIsLoading] = useState(false)
     
       const [sessionId, setSessionId] = useState("")
 
-      const auth = useAuth()
+      const chatContext = useChat()
     
-      useEffect(() => {
+      /* useEffect(() => {
         const uniqueId = `sesion-${crypto.randomUUID()}`
         setSessionId(uniqueId);
         console.log("SessionID generado: ", uniqueId)
-      }, [])
+      }, []) */
       
-      useEffect(() => {
+      /* useEffect(() => {
         console.log("Esto es lo que contiene auth:", auth);
-      }, [auth])
+      }, [auth]) */
     
       useEffect(() => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth"})
       })
-
-      
     
-      const send = async (e) => {
+      const handleSend = async (e) => {
         e.preventDefault()
         if (!input.trim()) return
-    
-        const userMsg = { role: "user", content: [{ text: input }]};
-        setMessages((prev) => [...prev, userMsg])
-        setInput("");
-        setIsLoading(true)
-    
-        try{
-          console.log('Enviando mensaje...')
-          
-          //implementar después newHistory.slice(-6)
-          const res = await sendMessage(input, sessionId)
-    
-          if (res.ok) {
-            const aiMsg = { role: "assistant", content: [{ text: res.response }] }
-            setMessages((prev) => [...prev, aiMsg])
-            setIsLoading(false)
-          }
-    
-          //Debug
-          console.log('Respuesta completa del backend:', res)
-    
-          /* setMessages((prev) => [...prev, `Tú: ${userQuestion}`, res.response]) */
-    
-          
-        } catch (error) {
-          console.log("Error al enviar el texto:", error)
-          setMessages((prev) => [...prev, "Error: No se pudo obtener respuesta."])
-        } finally {
-          setIsLoading(false)
+
+        if (!chatContext?.selectedChatId) {
+          alert("Please, select or create a chat")
+          return
         }
+
+        const textToSend = input;
+        setInput("");
+
+        await chatContext?.sendMessage(textToSend)
+        
       }
     
       useEffect(() => {
-        console.log("ESTO ES EL USESTATE DE MESSAGES:",messages)
-      }, [messages])
+        console.log("ESTO ES EL USESTATE DE MESSAGES:",chatContext?.messages)
+      }, [chatContext?.messages])
       
     
       return (
@@ -88,7 +64,14 @@ function Chat() {
                 </header>
         
                 <div className='flex-1 overflow-y-auto p-4 md:p-10 space-y-4'>
-                  {messages.map((msg, index) => {
+                  {!chatContext?.selectedChatId && (
+                    <div className='flex h-full items-center justify-center text-gray-500'>
+                      <p>Selecciona una conversación o crea una nueva.</p>
+                    </div>
+                  )}
+
+                  {/* MAPEO DE MENSAJES */}
+                  {chatContext?.messages && chatContext?.messages.map((msg, index) => {
                     const isUser = msg.role === "user";
                     return (
                       <div key={index}
@@ -100,7 +83,7 @@ function Chat() {
                             : 'bg-gray-800 text-gray-200 border border-gray-700 rounded-bl-none'
                         }`}>
                           <p className='text-sm whitespace-pre-wrap'>
-                            {msg.content[0].text}
+                            {msg.content}
                           </p>
                         </div>
                       </div>
@@ -108,7 +91,7 @@ function Chat() {
                   })}
         
                   {/* --- INDICADOR DE CARGA (TRES PUNTOS) --- */}
-                    {isLoading && (
+                    {chatContext?.isLoading && (
                       <div className="flex justify-start">
                         <div className="bg-gray-800 border border-gray-700 p-4 rounded-2xl rounded-bl-none shadow-md">
                           <div className="flex gap-1.5 items-center">
@@ -124,10 +107,10 @@ function Chat() {
                   <div ref={chatEndRef} />
                 </div>
         
-                {/* INPUT */}
+                {/* INPUT AREA*/}
                 <footer className="p-4 bg-gray-900 border-t border-gray-800">
                   <form className='max-w-4xl mx-auto flex gap-2'
-                    onSubmit={send}
+                    onSubmit={handleSend}
                   >
                     <input type="text" 
                       className='flex-1 bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-all' 

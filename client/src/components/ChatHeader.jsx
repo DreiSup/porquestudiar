@@ -21,12 +21,13 @@ const ChatHeader = () => {
             e.preventDefault()
     
             try {
-              const res = await logoutUser()
+              const res = await auth?.logout()
+              console.log(res)
               return res
             } catch (error) {
               console.log(error)        
             }
-          }
+    }
       
 
   return (
@@ -45,7 +46,7 @@ const ChatHeader = () => {
                 <Button variant="ghost" size="icon" className="rounded-full">
                     <Avatar>
                     <AvatarImage src={auth?.user.profilePic} alt="shadcn" />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarFallback>{auth?.user.name}</AvatarFallback>
                     </Avatar>
                 </Button>
                 </DropdownMenuTrigger>

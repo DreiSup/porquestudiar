@@ -5,15 +5,13 @@ import Chat from './pages/Chat';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
-import { useAuth } from './context/AuthContext';
+/* import { useAuth } from './context/AuthContext'; */
 import Experiment from './pages/Experiment';
-import { SidebarProvider, SidebarTrigger } from './components/ui/sidebar';
-import SideBar from './components/SideBar';
 
 function App() {
 
-  const auth = useAuth()
-  console.log(auth.isLoggedIn)
+  /* const auth = useAuth()
+  console.log(auth.isLoggedIn) */
   
   return (
       <main className="flex-1 flex flex-col min-h-screen min-w-0 dark">

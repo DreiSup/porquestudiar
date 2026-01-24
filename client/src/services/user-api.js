@@ -35,6 +35,7 @@ export const logoutUser = async () => {
                 
     const data = await res.data
     console.log(data)
+    return true
 }
 
 export const checkAuthStatus = async () => {

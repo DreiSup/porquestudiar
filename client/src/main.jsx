@@ -5,15 +5,16 @@ import { AuthProvider } from './context/AuthContext.jsx'
 import './index.css'
 import App from './App.jsx'
 import axios from 'axios'
+import { AppProviders } from './context/AppContextProviders.jsx'
 
 axios.defaults.withCredentials = true;
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
+      <AppProviders>
           <App />
-      </AuthProvider>
+      </AppProviders>
     </BrowserRouter>
   </StrictMode>,
 )

@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Plus, Search, Settings } from "lucide-react"
+import { Calendar, Home, Inbox, MessageSquare, Plus, Search, Settings } from "lucide-react"
 
 import {
   Sidebar,
@@ -12,10 +12,11 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { createNewChat } from "@/services/chat-api"
+import { useChat } from "@/context/ChatContext"
 
 const SideBar = () => {
 
-    const items = [
+  /*   const items = [
   {
     title: "Home",
     url: "#",
@@ -46,41 +47,32 @@ const SideBar = () => {
     url:"#",
     icon: Settings,
   }
-]
+] */
 
-const handleNewChat = async () => {
-  try {
-    console.log("creando nuevo chat")
+  const chatContext = useChat()
 
-    const res = await createNewChat()
+  /* console.log(chatContext) */
 
-    return res.status(201).json({message: "new chat created" })
+  const handleNewChat = async () => {
+    try {
+      console.log("creando nuevo chat")
 
-  } catch (error) {
-    console.log(error)
+      const data = await createNewChat()
+
+      if (data && data.chat) {
+        chatContext?.setChats((prevChats) => [...prevChats, data.chat])
+        chatContext?.setSelectedChatID(data.chat._id)
+        chatContext?.setMessages([])
+      }
+
+    } catch (error) {
+      console.log(error)
+    }
   }
-}
 
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupLabel>Acciones</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -97,6 +89,28 @@ const handleNewChat = async () => {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {chatContext?.chats.map((chat) => (
+                <SidebarMenuItem key={chat._id}>
+                  <SidebarMenuButton 
+                    onClick={()=> chatContext?.selectChat(chat._id)}
+                    isActive={chatContext?.selectedChatId === chat._id}
+                    className="cursor-pointer"
+                  >
+                    <MessageSquare className="size-4" />
+                    <span className="truncate font-medium">
+                        {chat.title || "Conversación sin título"}
+                    </span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        
       </SidebarContent>
     </Sidebar>
   )

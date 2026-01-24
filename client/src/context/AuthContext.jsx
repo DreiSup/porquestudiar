@@ -3,6 +3,7 @@ import { checkAuthStatus, loginUser, logoutUser, signupUser } from "../services/
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 /* const User = {
@@ -26,16 +27,18 @@ export const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+    const navigate = useNavigate() 
+
     useEffect(() => {
         async function checkStatus() {
             try {
+                setLoading(true)
                 const data = await checkAuthStatus()
-                console.log(data)
+                console.log("Data del useEffect situado en AuthContext:", data)
                 if (data) {
-                setUser({name: data.name, email: data.email, profilePic: data.profilePic})
+                setUser({name: data.name, email: data.email, profilePic: data.profilePic, chats: data.chats})
                 setIsLoggedIn(true)
                 } 
-                console.log(user);
                 
             } catch (error) {
                 console.log("Sesión no válida o expirada", error)
@@ -55,13 +58,24 @@ export const AuthProvider = ({children}) => {
 
 
     const login = async (email, password) => {
-        const data = await loginUser(email, password)
-        if (data) {
-            setUser({email: data.email, password: data.password})
-            setIsLoggedIn(true)
-            return data
+        
+        setLoading(true)
+        
+        try {
+            const data = await loginUser(email, password)
+            
+            if (data) {
+                setUser({email: data.email, password: data.password, profilePic: data.profilePic})
+                setIsLoggedIn(true)
+                return data
+            }
+
+        } catch (error) {
+            console.log(error)
+            return null
+        } finally {
+            setLoading(false)
         }
-        return null
     }
     
     const signup = async (name, email, password) => {
@@ -73,7 +87,17 @@ export const AuthProvider = ({children}) => {
     }
 
     const logout = async () => {
-        await logoutUser()
+
+            const data = await logoutUser()
+            console.log(data)
+            setIsLoggedIn(false)
+            setUser(null)
+    
+            localStorage.removeItem("auth-data")
+    
+            console.log("después de navigate")
+            window.location.reload()
+
     }
 
     const value = {
@@ -85,7 +109,7 @@ export const AuthProvider = ({children}) => {
         loading
     }
 
-    console.log("Estado actual - Loading:", loading, "isLoggedIn:", isLoggedIn);
+    /* console.log("Estado actual - Loading:", loading, "isLoggedIn:", isLoggedIn); */
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

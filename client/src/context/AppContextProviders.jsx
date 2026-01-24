@@ -1,14 +1,14 @@
 import { AuthProvider } from "./AuthContext"
-/* import { ChatProvider } from "./ChatContext" */
+import { ChatProvider } from "./ChatContext"
 
 
 
 export const AppProviders = ({ children }) => {
     return (
         <AuthProvider>
-            {/* <ChatProvider> */}
+            <ChatProvider>
                     {children}
-            {/* </ChatProvider> */}
+            </ChatProvider>
         </AuthProvider>
     )
 }
