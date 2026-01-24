@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { checkAuthStatus, loginUser, logoutUser, signupUser } from "../services/api";
+import { checkAuthStatus, loginUser, logoutUser, signupUser } from "../services/user-api";
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";

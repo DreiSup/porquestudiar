@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { signupUser } from '../services/api'
+import { signupUser } from '../services/user-api'
 
 const SignUp = () => {
     const [error, setError] = useState("")

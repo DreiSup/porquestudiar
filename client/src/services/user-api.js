@@ -1,22 +1,6 @@
-import axios from 'axios'
-const PORT = import.meta.env.VITE_PORT
+import apiClient from "./axios-client"
 
-const baseURL = `http://localhost:${PORT}/api`
-
-const api = axios.create({
-    baseURL: baseURL,
-    withCredentials: true
-});
-
-export const sendMessage = async (message, sessionId) => {
-    try{
-        const response = await api.post('/chat', { message: message, sessionId: sessionId })
-        return response.data
-    } catch (error) {
-        console.log("Something went wrong", error)
-        throw error
-    }
-}
+const api = apiClient
 
 export const signupUser = async (name, email, password) => {
     
@@ -32,7 +16,6 @@ export const signupUser = async (name, email, password) => {
 export const loginUser = async (email, password) => {
     
         console.log(email, password)
-        console.log(baseURL)
         const res = await api.post("/user/login", {email, password});
         if (res.status !== 200) {
             throw new Error("Unable to login")

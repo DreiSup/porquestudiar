@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Form, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { signupUser } from "@/services/api"
+import { signupUser } from "@/services/user-api"
 
 const Experiment = (className, ...props) => {
 

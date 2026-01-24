@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { logoutUser } from '@/services/api'
+import { logoutUser } from '@/services/user-api'
 import { useAuth } from "@/context/AuthContext"
 
 const ChatHeader = () => {

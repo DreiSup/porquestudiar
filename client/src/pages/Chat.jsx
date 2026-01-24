@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef} from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
-import { sendMessage } from '@/services/api.js';
 import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar.jsx';
 import SideBar from '@/components/SideBar.jsx';
 import ChatHeader from '@/components/ChatHeader.jsx';
+import { sendMessage } from '@/services/chat-api.js';
 
 
 function Chat() {
