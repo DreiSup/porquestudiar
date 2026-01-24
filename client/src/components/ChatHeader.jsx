@@ -10,23 +10,28 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { logoutUser } from '@/services/user-api'
 import { useAuth } from "@/context/AuthContext"
+import { Skeleton } from "./ui/skeleton"
 
 const ChatHeader = () => {
 
     const auth = useAuth()
 
     const handleLogOut = async (e) => {
-            e.preventDefault()
-    
-            try {
-              const res = await auth?.logout()
-              console.log(res)
-              return res
-            } catch (error) {
-              console.log(error)        
-            }
+        e.preventDefault()
+
+        try {
+          const res = await auth?.logout()
+          console.log(res)
+          return res
+        } catch (error) {
+          console.log(error)        
+        }
+    }
+
+    const getInitials = () => {
+        if (!auth?.user || !auth?.user.name) return "U"; // U de User por defecto
+        return auth?.user.name.substring(0, 2).toUpperCase();
     }
       
 
@@ -39,14 +44,18 @@ const ChatHeader = () => {
           className="mx-2 data-[orientation=vertical]:h-4"
         />
         <h1 className="text-base font-medium">Documents</h1>
-        {auth?.isLoggedIn 
+
+        {auth?.isLoading && (
+          <Skeleton className="h-8 w-8 rounded-full bg-slate-200"/>
+        )}
+        {!auth?.isLoading && auth?.isLoggedIn && auth?.user
             ? 
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
                     <Avatar>
-                    <AvatarImage src={auth?.user.profilePic} alt="shadcn" />
-                    <AvatarFallback>{auth?.user.name}</AvatarFallback>
+                    <AvatarImage src={auth?.user?.profilePic} alt="shadcn" />
+                    <AvatarFallback>{getInitials()}</AvatarFallback>
                     </Avatar>
                 </Button>
                 </DropdownMenuTrigger>

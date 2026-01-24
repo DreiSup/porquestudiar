@@ -18,7 +18,7 @@ export const getAllUsers = async (req, res) => {
 
 export const getUser = async (req,res) => {
     try {
-        console.log("BACKEEEND")
+        
         const user = await User.findById(req.params.id)
         
         console.log(user)
@@ -123,15 +123,27 @@ export const verifyUser = async (req, res) => {
         if (!user) {
             return res.status(401).send("User not registered or Token malfunctioned")
         }
+
         if (user._id.toString() !== res.locals.jwtData.id) {
             return res.status(401).send("Permisions did not match")
         }
+
+        if (user.chats.length === 0) {
+            user.chats.push({
+                title: "Welcome",
+                message: [{
+                    role: "assistant",
+                    content: "¡Hola! Soy tu asistente de estudio. ¿En qué puedo ayudarte?"
+                }]
+            })
+        }
+
         return res
         .status(200)
-        .json({message: "OK", name: user.name, email: user.email })
+        .json({message: "OK", name: user.name, email: user.email, profilePic: user.profilePic, chats: user.chats })
     } catch (error) {
         console.log(error)
-        return res.status(200).json({message: "error", cause: error.message})
+        return res.status(404).json({message: "error", cause: error.message})
     }
 }
 
@@ -156,7 +168,7 @@ export const userLogout = async (req, res) => {
         return res.status(200).json({message: `User : ${user} logged out`})
     } catch (error) {
         console.log(error)
-        return res.status(200).json({ message: "ERROR", cause: error.message})
+        return res.status(404).json({ message: "ERROR", cause: error.message})
     }
 }
 

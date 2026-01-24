@@ -1,6 +1,35 @@
 import User from "../models/User.js";
 import { invokeAgent } from "../services/bedrockAgentService.js";
 
+export const createNewChat = async (req, res) => {
+    try {
+        console.log("YOU ARE TRYNG TO CREATE A NEW CHAT")
+        const user = await User.findById(res.locals.jwtData.id);
+        if (!user) { return res.status(401).json({ message: "User not found"}) }
+
+        console.log(user.chats)
+
+        if (user.chats.length >= 5 ) {
+            return res.status(403).json({ message: "You have reached the limit of 5 conversations"})
+        }
+
+        user.chats.push({
+            title: "New conversation",
+            messages: []
+        })
+
+        await user.save()
+
+        const newChat = user.chats[user.chats.length - 1]
+
+        return res.status(201).json({ chat: newChat})
+
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ message: "Error trying to create a new chat"})
+    }
+}
+
 export const postMessage = async (req, res) => {
     const {message, sessionId} = req.body;
     
@@ -13,6 +42,8 @@ export const postMessage = async (req, res) => {
             
             //Llamamos al servicio de Bedrock, y responde
             const responseAI = await invokeAgent(message, sessionId);
+
+            user.chats.push()
     
             //Devolvemos la respuesta de Bedrock
             res.json({
@@ -33,26 +64,19 @@ export const postMessage = async (req, res) => {
 }
 
 export const generateChatCompletion = async (req, res) => {
-    const {message} = req.body
+    const {message, chatId} = req.body
 
     try {
         const user = await User.findById(res.locals.jwtData.id)
         if(!user) return res.status(401).json({message: "User not found"})
 
-        let currentChat;
+        const currentChat = user.chats.id(chatId)
 
-        if (user.chats.length === 0) {
-            const newChat = {
-                title: message.substring(0, 15),
-                messages: []
-            };
-            user.chats.push(newChat);
-            currentChat = user.chats[0]
-        } else {
-            currentChat = user.chats[user.chats.length - 1]
+        if (!currentChat) {
+            return res.status(404).json({ message: "Chat not found or deleted"})
         }
 
-        currentChat.message.push({role: "user", content: message})
+        currentChat.messages.push({role: "user", content: message})
 
         /* const response = await  */
         const aiResponse = "Esta es la respuesta simulada de la IA"

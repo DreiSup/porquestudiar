@@ -21,6 +21,7 @@ export const loginUser = async (email, password) => {
             throw new Error("Unable to login")
         }
         
+        console.log("LOGIN USER",res)
         return res
     }
 

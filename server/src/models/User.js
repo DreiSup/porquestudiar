@@ -29,6 +29,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    profilePic: {
+        type: String,
+        default: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+    },
     chats: {type: [chatSchema], default: []}
 })
 
