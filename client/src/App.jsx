@@ -5,24 +5,33 @@ import Chat from './pages/Chat';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
-/* import { useAuth } from './context/AuthContext'; */
+import { useAuth } from './context/AuthContext';
 import Experiment from './pages/Experiment';
+import { Toaster } from 'sonner';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
 
-  /* const auth = useAuth()
-  console.log(auth.isLoggedIn) */
+  const {loading} = useAuth()
+
   
   return (
       <main className="flex-1 flex flex-col min-h-screen min-w-0 dark">
+        {loading && <LoadingScreen/>}
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/login' element={<Login/>}/>
-          <Route path='/chat' element={<Chat/>}/>
+          <Route path='/chat' element={
+              <ProtectedRoute>
+                <Chat/>
+              </ProtectedRoute>
+          }/>
           <Route path='/experiment' element={<Experiment/>}/>
           <Route path='/*' element={<NotFound/>}/>
         </Routes>
+        <Toaster theme='dark' position='top-center'/>
       </main>
   )
 }

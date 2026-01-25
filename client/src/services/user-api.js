@@ -10,7 +10,7 @@ export const signupUser = async (name, email, password) => {
             throw new Error("Unable to Signup")
         }
         
-        return res
+        return res.data
     }
 
 export const loginUser = async (email, password) => {

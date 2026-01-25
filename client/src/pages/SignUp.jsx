@@ -9,19 +9,22 @@ import {
   FieldSeparator,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { toast } from "sonner"
 import { Form, useNavigate } from "react-router-dom"
 import { useState } from "react"
-import { signupUser } from "@/services/user-api"
+import { useAuth } from "@/context/AuthContext"
 
 const SignUp = (className, ...props) => {
 
-  const [error, setError] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
   const [formData, setFormData] = useState({
       name: "",
       email: "",
       password: "",
       confirmpassword: ""
   })
+
+  const auth = useAuth()
   const navigate = useNavigate()
 
   const handleChange = (e) => {    
@@ -30,25 +33,44 @@ const SignUp = (className, ...props) => {
 
   const handleSubmit = async (e) => {
       e.preventDefault();
-      setError("")
+      setErrorMessage("")
 
       console.log("froooontendd")
       //Validación básica cliente
       if (formData.password !== formData.confirmpassword) {
-          return setError("Las contraseñas no coinciden")
+          setErrorMessage("Las contraseñas no coinciden")
+          toast.error(errorMessage)
+          return 
       }
 
       try {
-          const response = await signupUser(formData.name, formData.email, formData.password);
-          console.log(response)
-          if (response.status == 201) {
-              navigate('/login')
-          }
+          await auth?.signup(formData.name, formData.email, formData.password);
+
+          const waitPromise = new Promise((resolve) => 
+            setTimeout(() => resolve({name: formData.name}), 2000)
+          )
+          
+          toast.promise(() => waitPromise,
+            {
+              loading: "Loading...",
+              success: (data) => `${data.name} has been created`,
+              error: "Error"
+          })
+
+          await waitPromise
+          navigate('/login')
+          
       } catch (error) {
-          console.log("Ha habido un error al registrarte: ", error)
+          console.log(error.status)
+          if (error && error.status == 409) {
+            setErrorMessage('Este email ya está registrado')
+            toast.error(errorMessage)
+          } else{
+            console.log("Ha habido un error al registrarte: ", error)
+          }
       }
   }
-  
+
   return (
     <div className=" flex min-h-svh flex-col items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm md:max-w-4xl">      
@@ -166,6 +188,9 @@ const SignUp = (className, ...props) => {
             and <a href="#">Privacy Policy</a>.
           </FieldDescription>
         </div>
+        <Button variant="outline" onClick={() => toast("hey", {position: "top-center"})}>
+          toast
+        </Button>
       </div>
     </div>
   )

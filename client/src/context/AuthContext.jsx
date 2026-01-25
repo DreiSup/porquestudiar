@@ -6,19 +6,6 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-/* const User = {
-    name, email
-}
-
-const UserAuth = {
-    isLoggedIn,
-    user: User | null,
-    login: (email, password)=>Promise<void>;
-    signup: (name, email , password)=>Promise<void>;
-    logout: (name ,email , password)=>Promise<void>;
-
-} */
-
 const AuthContext = createContext(null)
 
 export const AuthProvider = ({children}) => {
@@ -41,7 +28,7 @@ export const AuthProvider = ({children}) => {
                 } 
                 
             } catch (error) {
-                console.log("Sesión no válida o expirada", error)
+                console.log("Sesión no válida o expirada: ", error.message)
                 setIsLoggedIn(false)
                 setUser(null)
             } finally {
@@ -62,12 +49,15 @@ export const AuthProvider = ({children}) => {
         setLoading(true)
         
         try {
-            const data = await loginUser(email, password)
+            const response = await loginUser(email, password)
+
+            console.log("DATA RECEIVED AFTER LOGIN", response)
             
-            if (data) {
-                setUser({email: data.email, password: data.password, profilePic: data.profilePic})
+            if (response) {
+                setUser({email: response.data.user.email, password: response.data.user.password, profilePic: response.data.user.profilePic})
+                console.log(response.data)
                 setIsLoggedIn(true)
-                return data
+                return response
             }
 
         } catch (error) {
@@ -79,24 +69,39 @@ export const AuthProvider = ({children}) => {
     }
     
     const signup = async (name, email, password) => {
-        const data = await signupUser(name, email, password)
-        if (data) {
-            setUser({email: data.email, name: data.name})
-            setIsLoggedIn(true)
-        } 
+        setLoading(true)
+        try {
+            const data = await signupUser(name, email, password)
+            if (data & data.user) {
+                setUser({email: data.email, name: data.name})
+                setIsLoggedIn(true)
+                return data
+            } 
+        } catch (error) {
+            console.log("Somehting went wrong:", error)
+            throw error;
+        } finally {
+            setLoading(false)
+        }
     }
 
     const logout = async () => {
+        setLoading(true)
 
+        try {
             const data = await logoutUser()
             console.log(data)
+            navigate("/login", {replace: true})
+            
             setIsLoggedIn(false)
             setUser(null)
-    
             localStorage.removeItem("auth-data")
-    
-            console.log("después de navigate")
-            window.location.reload()
+            
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setLoading(false)
+        }
 
     }
 
@@ -106,6 +111,7 @@ export const AuthProvider = ({children}) => {
         login,
         signup,
         logout,
+        setLoading,
         loading
     }
 

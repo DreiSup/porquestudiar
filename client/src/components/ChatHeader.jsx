@@ -43,7 +43,7 @@ const ChatHeader = () => {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <h1 className="text-base font-medium">Documents</h1>
+        <h1 className="text-base font-medium">Porquéestudiar</h1>
 
         {auth?.isLoading && (
           <Skeleton className="h-8 w-8 rounded-full bg-slate-200"/>
@@ -77,7 +77,7 @@ const ChatHeader = () => {
         <div className="ml-auto flex items-center gap-2">
           <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
             <a
-              href="https://github.com/shadcn-ui/ui/tree/main/apps/v4/app/(examples)/dashboard"
+              href="https://github.com/DreiSup/porquestudiar"
               rel="noopener noreferrer"
               target="_blank"
               className="dark:text-foreground"

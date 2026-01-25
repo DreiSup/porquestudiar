@@ -45,7 +45,10 @@ export const ChatProvider = ({children}) => {
     }
 
     const selectChat = async (chatId) => {
+        console.log(chatId, chats)
         const foundChat = chats.find(c => c._id === chatId);
+
+        console.log(foundChat)
         if (foundChat) {
             setSelectedChatId(chatId);
             setMessages(foundChat.messages || [])

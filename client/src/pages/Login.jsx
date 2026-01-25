@@ -39,6 +39,8 @@ const LogIn = (className, ...props) => {
 
           const res = await auth?.login(formData.email, formData.password);
 
+          console.log(res)
+
           if (res) {
               navigate("/chat")
           } else {
