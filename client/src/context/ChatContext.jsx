@@ -59,9 +59,10 @@ export const ChatProvider = ({children}) => {
 
         if (!selectedChatId) return
 
-        console.log(content)
+        console.log("content:", content)
 
-        const newMsg = {role: "user", message: content}
+        const newMsg = {role: "user", content: content}
+
         setMessages(prev => [...(prev || []), newMsg])
 
         console.log("NEWMSG:", newMsg)
@@ -69,7 +70,9 @@ export const ChatProvider = ({children}) => {
         try {
             const data = await sendChatMessage(content, selectedChatId)
             console.log("DATA MESSAGES FROM CHATCONTEXT:", data)
-            setMessages(data.messages)
+            if (data.ok) {
+                setMessages([...data.messages])
+            }
 
         } catch (error) {
             console.log("Error trying to send message",error)
