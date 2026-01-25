@@ -61,9 +61,8 @@ const ChatHeader = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-32">
                 <DropdownMenuGroup>
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                    <DropdownMenuItem>Settings</DropdownMenuItem>
+                    <DropdownMenuItem>{auth?.user?.name}</DropdownMenuItem>
+                    <DropdownMenuItem>{auth?.user?.email}</DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>

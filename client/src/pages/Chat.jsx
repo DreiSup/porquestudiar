@@ -52,8 +52,7 @@ const Chat = () => {
     
       return (
         <>
-        {/* {auth?.user ? <p>loading</p>
-          :  */}
+        
           <SidebarProvider>
           <SideBar/>
 
@@ -133,7 +132,6 @@ const Chat = () => {
                       </main>
                       </SidebarInset>
                       </SidebarProvider>
-                    {/* } */}
           </>
                       
                     );

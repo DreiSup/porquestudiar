@@ -96,7 +96,7 @@ const SideBar = () => {
               {chatContext?.chats.map((chat) => (
                 <SidebarMenuItem key={chat._id}>
                   <SidebarMenuButton 
-                    onClick={()=> chatContext?.selectChat(chat._id)}
+                    onClick={()=> chatContext?.selectChat(chat.id)}
                     isActive={chatContext?.selectedChatId === chat._id}
                     className="cursor-pointer"
                   >

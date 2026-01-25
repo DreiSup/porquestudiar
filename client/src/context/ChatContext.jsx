@@ -46,7 +46,7 @@ export const ChatProvider = ({children}) => {
 
     const selectChat = async (chatId) => {
         console.log(chatId, chats)
-        const foundChat = chats.find(c => c._id === chatId);
+        const foundChat = chats.find(c => c.id === chatId);
 
         console.log(foundChat)
         if (foundChat) {
@@ -59,8 +59,12 @@ export const ChatProvider = ({children}) => {
 
         if (!selectedChatId) return
 
+        console.log(content)
+
         const newMsg = {role: "user", message: content}
         setMessages(prev => [...(prev || []), newMsg])
+
+        console.log("NEWMSG:", newMsg)
 
         try {
             const data = await sendChatMessage(content, selectedChatId)
