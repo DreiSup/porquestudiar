@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, MessageSquare, Plus, Search, Settings } from "lucide-react"
+import { Calendar, Home, Inbox, MessageSquare, MoreHorizontal, Plus, PlusCircle, Search, Settings } from "lucide-react"
 
 import {
   Sidebar,
@@ -8,11 +8,14 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
+  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { createNewChat } from "@/services/chat-api"
 import { useChat } from "@/context/ChatContext"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu"
+import { DropdownMenuTrigger } from "./ui/dropdown-menu"
 
 const SideBar = () => {
 
@@ -60,7 +63,7 @@ const SideBar = () => {
       const data = await createNewChat()
 
       if (data && data.chat) {
-        chatContext?.setChats((prevChats) => [...prevChats, data.chat])
+        
         chatContext?.setSelectedChatID(data.chat._id)
         chatContext?.setMessages([])
       }
@@ -68,6 +71,10 @@ const SideBar = () => {
     } catch (error) {
       console.log(error)
     }
+  }
+
+  const handleDeleteChat = async (id) => {
+    console.log("Tryng to delete chat...", id)
   }
 
   return (
@@ -105,12 +112,26 @@ const SideBar = () => {
                         {chat.title || "Conversación sin título"}
                     </span>
                   </SidebarMenuButton>
+                  <DropdownMenu>
+                     <DropdownMenuTrigger asChild>
+                        <SidebarMenuAction>
+                          <MoreHorizontal/>
+                        </SidebarMenuAction>
+                     </DropdownMenuTrigger>
+                     <DropdownMenuContent side="right" align="start" className="bg-black border-black text-white shadow-xl">
+                        <DropdownMenuItem>
+                          <span>Edit</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>
+                          <span onClick={() => handleDeleteChat(chat.id)}>Delete</span>
+                        </DropdownMenuItem>
+                     </DropdownMenuContent>
+                  </DropdownMenu>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        
       </SidebarContent>
     </Sidebar>
   )
