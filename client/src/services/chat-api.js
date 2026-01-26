@@ -24,3 +24,19 @@ export const sendChatMessage = async (message, sessionId) => {
         throw error
     }
 }
+
+
+
+
+
+//DELETE
+export const deleteOneChat = async (id) => {
+    try {
+        console.log(id)
+        const response = await api.delete(`/chat/${id}`)
+        console.log(response)
+        return response.data
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -31,6 +31,7 @@ export const createNewChat = async (req, res) => {
 }
 
 export const postMessage = async (req, res) => {
+
     const {message, sessionId} = req.body;
     
         if (!message) {
@@ -39,16 +40,30 @@ export const postMessage = async (req, res) => {
     
         try {
             console.log(`[LOG] Procesandi pregunta: "${message}"`)
+
+            const user = await User.findById(res.locals.jwtData.id)
+            if (!user) return res.status(404).json({error: "User not found"})
+
+            console.log(user.chats, "Session id:", sessionId)
             
+            const chat = user.chats.find(c => c.id === sessionId)
+            if (!chat) return res.status(404).json({error: "Chat not found"})
+
+            console.log("this is chat:", chat)
+
+            chat.messages.push({role: "user", content: message})
+
             //Llamamos al servicio de Bedrock, y responde
             const responseAI = await invokeAgent(message, sessionId);
 
-            user.chats.push()
+            chat.messages.push({role: "assistant", content: responseAI})
+
+            await user.save()
     
             //Devolvemos la respuesta de Bedrock
             res.json({
                 ok: true,
-                response: responseAI
+                messages: chat.messages
             })
     
             console.log("!!!   DEBUG   !!!: esto es responseAI:", responseAI)
@@ -90,5 +105,36 @@ export const generateChatCompletion = async (req, res) => {
     } catch (error) {
         console.log(error);
         return res.status(500).json({ message: "Error trying to communicate"})
+    }
+}
+
+
+
+
+
+export const deleteChat = async (req, res) => {
+    
+    const {id} = req.params 
+
+    try {
+        const user = await User.findById(res.locals.jwtData.id);
+
+        if (!user) {
+            return res.status(401).json({error: "User not found"})
+        }
+
+        const initialCount = user.chats.length;
+        user.chats = user.chats.filter(chat => chat.id !== id)
+
+        if (user.chats.length === initialCount) {
+            return res.status(404).json({error: "Chat did not exist in th DB"})
+        }
+
+        await user.save()
+
+        return res.status(200).json({ok: true, message: "Chat deleted", chats: user.chats})
+    } catch (error) {
+        console.log("Error trying to delete chat: ",error)
+        return res.status(500).json({ error: "Internal error"})
     }
 }

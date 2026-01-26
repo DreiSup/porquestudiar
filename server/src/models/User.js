@@ -9,7 +9,7 @@ const messageSchema =new mongoose.Schema({
 const chatSchema = new mongoose.Schema({
     id: {
         type: String,
-        default: () => randomUUID
+        default: () => randomUUID()
     },
     title: {type: String, required: true},
     messages: [messageSchema]

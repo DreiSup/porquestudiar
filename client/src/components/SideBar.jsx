@@ -60,7 +60,7 @@ const SideBar = () => {
     try {
       console.log("creando nuevo chat")
 
-      const data = await createNewChat()
+      const data = await chatContext?.createChat()
 
       if (data && data.chat) {
         
@@ -75,6 +75,13 @@ const SideBar = () => {
 
   const handleDeleteChat = async (id) => {
     console.log("Tryng to delete chat...", id)
+
+    try {
+      const data = await chatContext?.deleteChat(id)
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -123,7 +130,11 @@ const SideBar = () => {
                           <span>Edit</span>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <span onClick={() => handleDeleteChat(chat.id)}>Delete</span>
+                          <span
+                            onClick={() => handleDeleteChat(chat.id)}
+                          >
+                            Delete
+                          </span>
                         </DropdownMenuItem>
                      </DropdownMenuContent>
                   </DropdownMenu>

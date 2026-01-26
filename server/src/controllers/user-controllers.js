@@ -35,9 +35,18 @@ export const userSignUp = async (req, res) => {
     try {
         const {name, email, password} = req.body
 
+        const existingUser = await User.findOne({email})
+
+        if (existingUser) {
+            return res.status(409).json({
+                message: "ERROR",
+                cause: "User already exists"
+            })
+        }
+
         const salt = genSaltSync(10)
         const passwordHash = hashSync(password, salt)
-        console.log(passwordHash)
+        /* console.log(passwordHash) */
 
         const user = new User ({
             name, 
@@ -55,7 +64,7 @@ export const userSignUp = async (req, res) => {
                 signed: true
             })
 
-        const token = createToken(user._id.toString(), user.email, "7d")
+        /* const token = createToken(user._id.toString(), user.email, "7d")
         const expires = new Date()
         expires.setDate(expires.getDate() + 7)
         //cambiar esto en caso de deploy
@@ -65,13 +74,13 @@ export const userSignUp = async (req, res) => {
             expires: expires,
             httpOnly: true,
             signed: true
-        })
+        }) */
 
         return res.status(201).json({mesage: "OK", name: user.name, email: user.email })
 
     } catch (error) {
         console.log(error)
-        return res.status(404).json({message: 'Error trying to signup user: ', error})
+        return res.status(500).json({message: 'Error trying to signup user: ', error})
     }
 }
 
@@ -110,7 +119,7 @@ export const userLogIn = async (req, res) => {
             })
     
             console.log(res.cookie)
-            res.status(200).send({message: "Login OK",token, user: user.email})
+            res.status(200).send({message: "Login OK", token, user: user})
     
         } catch (error) {
             console.log(error)

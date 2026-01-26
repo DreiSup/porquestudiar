@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { useAuth } from "./AuthContext"
-import { createNewChat, sendChatMessage } from "@/services/chat-api"
+import { createNewChat, deleteOneChat, sendChatMessage } from "@/services/chat-api"
 import { useNavigate } from "react-router-dom"
 
 const ChatContext = createContext(null)
@@ -19,6 +19,7 @@ export const ChatProvider = ({children}) => {
     useEffect(() => {
         console.log("user desde ChatContent:",user)
         console.log("user.chats desde ChatContent:",user?.chats);
+        console.log("chats desde ChatContent:", chats);
         if (user && user?.chats) {
             setChats(user.chats)
             
@@ -29,7 +30,7 @@ export const ChatProvider = ({children}) => {
 
     const createChat = async () => {
 
-        isLoading(true)
+        setIsLoading(true)
 
         try {
             const data = await createNewChat()
@@ -80,6 +81,22 @@ export const ChatProvider = ({children}) => {
     }
 
 
+    const deleteChat = async (id) => {
+        try {
+            console.log(id)
+            const data = await deleteOneChat(id)
+
+            if (data.ok) {
+                setChats(data.chats)
+            }
+            
+            console.log(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
     const value = {
         chats,
         messages,
@@ -87,7 +104,8 @@ export const ChatProvider = ({children}) => {
         createChat,
         selectChat,
         selectedChatId,
-        sendMessage
+        sendMessage,
+        deleteChat
     }
 
     return <ChatContext.Provider value={value}>{children}</ChatContext.Provider>
