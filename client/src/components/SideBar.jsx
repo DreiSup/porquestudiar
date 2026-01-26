@@ -1,8 +1,9 @@
-import { Calendar, Home, Inbox, MessageSquare, MoreHorizontal, Plus, PlusCircle, Search, Settings } from "lucide-react"
-
+import { BadgeCheckIcon, Calendar, Home, Inbox, LogOutIcon, MessageSquare, MoreHorizontal, Plus, PlusCircle, Search, Settings } from "lucide-react"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupAction,
   SidebarGroupContent,
@@ -12,10 +13,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { createNewChat } from "@/services/chat-api"
 import { useChat } from "@/context/ChatContext"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem } from "./ui/dropdown-menu"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator } from "./ui/dropdown-menu"
 import { DropdownMenuTrigger } from "./ui/dropdown-menu"
+import { useAuth } from "@/context/AuthContext"
+import { Button } from "./ui/button"
 
 const SideBar = () => {
 
@@ -52,6 +54,7 @@ const SideBar = () => {
   }
 ] */
 
+  const auth = useAuth()
   const chatContext = useChat()
 
   /* console.log(chatContext) */
@@ -84,6 +87,23 @@ const SideBar = () => {
     }
   }
 
+  const handleLogOut = async (e) => {
+        e.preventDefault()
+
+        try {
+          const res = await auth?.logout()
+          console.log(res)
+          return res
+        } catch (error) {
+          console.log(error)        
+        }
+    }
+
+    const getInitials = () => {
+        if (!auth?.user || !auth?.user.name) return "U"; // U de User por defecto
+        return auth?.user.name.substring(0, 2).toUpperCase();
+    }
+
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarContent>
@@ -96,7 +116,7 @@ const SideBar = () => {
                     onClick={handleNewChat} 
                     className="border border-sidebar-border shadow-sm hover:bg-sidebar-accent"
                 >
-                  <Plus className="text-amber-500" /> {/* Icono destacado */}
+                  <Plus className="text-white" /> {/* Icono destacado */}
                   <span className="font-bold">Nuevo Chat</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -144,6 +164,39 @@ const SideBar = () => {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        {!auth?.isLoading && auth?.isLoggedIn && auth?.user
+          ? 
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <Avatar>
+                    <AvatarImage src={auth?.user?.profilePic} alt="shadcn" />
+                    <AvatarFallback>LR</AvatarFallback>
+                  </Avatar>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuGroup>
+                  <DropdownMenuItem>
+                    <BadgeCheckIcon />
+                    {auth?.user?.name}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <BadgeCheckIcon />
+                    {auth?.user?.email}
+                  </DropdownMenuItem>
+                </DropdownMenuGroup>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={handleLogOut}>
+                  <LogOutIcon />
+                  Sign Out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+          : <></>}
+      </SidebarFooter>              
     </Sidebar>
   )
 }
