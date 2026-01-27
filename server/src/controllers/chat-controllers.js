@@ -1,6 +1,36 @@
 import User from "../models/User.js";
 import { invokeAgent } from "../services/bedrockAgentService.js";
 
+
+//GET
+export const getUserChats = async (req,res) => {
+    try {
+        
+        const user = await User.findById(res.locals.jwtData.id)
+
+        if (!user) {
+        return res.status(401).json({ message: "Usuario no registrado" });
+        }
+
+        const sortedChats = user.chats.sort((a,b) => {
+            return new Date(b.updatedAt) - new Date(a.updatedAt)
+        })
+      
+        return res.status(200).json({message: "Ok", sortedChats: sortedChats})
+
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({message: 'something went wrong', error})
+    }
+}
+
+
+export const getUniqueChat = async (req, res) => {
+    
+}
+
+
+//POST
 export const createNewChat = async (req, res) => {
     try {
         console.log("YOU ARE TRYNG TO CREATE A NEW CHAT")
@@ -109,9 +139,51 @@ export const generateChatCompletion = async (req, res) => {
 }
 
 
+//PUT
+export const changeChatTitle = async (req, res) => {
+    try {
+        const userId = await User.findById(res.locals.jwtData.id)
+
+        if (!user) {
+        return res.status(401).json({ message: "Usuario no registrado" });
+        }
+
+        const chatId = req.params.id
+        const {title} = req.body;
+
+        if (!title) {
+            return res.status(400).json({ message: "Titol required" });
+        }
+
+        const user = await User.findOneAndUpdate(
+            {
+                _id: userId,
+                "chats.id": chatId
+            },
+            {
+                $set: {
+                    "chats.$.title": title
+                }
+            },
+            {new: true}
+        );
+
+        if (!user) {
+            return res.status(404).json({ message: "Chat not found or unauthorized" });
+        }
+
+        const updatedChat = user.chats.find(c => c.id === chatId);
+
+        return res.status(200).json({ message: "Título actualizado", chat: updatedChat });
+        
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({message: 'something went wrong', error})
+    }
+}
 
 
-
+//DELETE
 export const deleteChat = async (req, res) => {
     
     const {id} = req.params 

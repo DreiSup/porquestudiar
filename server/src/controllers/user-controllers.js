@@ -3,6 +3,9 @@ import { genSaltSync, hashSync, compare} from "bcrypt"
 import { createToken } from "../utils/token-manager.js"
 import { COOKIE_NAME } from "../utils/constants.js"
 
+
+
+//GET 
 export const getAllUsers = async (req, res) => {
     //get all users form DB
     try {
@@ -30,6 +33,7 @@ export const getUser = async (req,res) => {
     }
 }
 
+//POST
 export const userSignUp = async (req, res) => {
     //sign up user
     try {

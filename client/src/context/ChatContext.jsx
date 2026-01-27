@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { useAuth } from "./AuthContext"
-import { createNewChat, deleteOneChat, sendChatMessage } from "@/services/chat-api"
+import { createNewChat, deleteOneChat, getUserChats, sendChatMessage } from "@/services/chat-api"
 import { useNavigate } from "react-router-dom"
 
 const ChatContext = createContext(null)
@@ -18,15 +18,27 @@ export const ChatProvider = ({children}) => {
 
     useEffect(() => {
         console.log("user desde ChatContent:",user)
-        console.log("user.chats desde ChatContent:",user?.chats);
-        console.log("chats desde ChatContent:", chats);
+        /* console.log("user.chats desde ChatContent:",user?.chats);
+        console.log("chats desde ChatContent:", chats); */
         if (user && user?.chats) {
+            console.log(user?.chats)
             setChats(user.chats)
             
         } else {
             /* navigate("/login") */
         }
     }, [user])
+
+
+    const getAllChats = async () => {
+        try {
+            const data = await getUserChats()
+
+            return data
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const createChat = async () => {
 
@@ -37,6 +49,7 @@ export const ChatProvider = ({children}) => {
             setChats([...chats, data.chat])
             setSelectedChatId(data.chat._id)
             setMessages([])
+            console.log(chats)
 
         } catch (error) {
             console.log("Error creando el chat", error)
@@ -75,6 +88,21 @@ export const ChatProvider = ({children}) => {
                 setMessages([...data.messages])
             }
 
+            setChats ((prevChats) => {
+            const currentChat = prevChats.find(c => (c.id) === selectedChatId);
+        
+            if (!currentChat) return prevChats
+
+            const otherChats = prevChats.filter(c => (c.id) !== selectedChatId)
+
+            const updatedChat = {
+                ...currentChat,
+                updatedAt: new Date().toISOString()
+            }
+
+            return [updatedChat, ...otherChats]
+        })
+
         } catch (error) {
             console.log("Error trying to send message",error)
         }
@@ -99,13 +127,16 @@ export const ChatProvider = ({children}) => {
 
     const value = {
         chats,
+        setChats,
         messages,
         isLoading,
-        createChat,
         selectChat,
         selectedChatId,
+        setSelectedChatId,
+        createChat,
         sendMessage,
-        deleteChat
+        deleteChat,
+        getAllChats
     }
 
     return <ChatContext.Provider value={value}>{children}</ChatContext.Provider>

@@ -2,6 +2,21 @@ import apiClient from "./axios-client"
 
 const api = apiClient
 
+
+export const getUserChats = async () => {
+    try {
+        const res = await api.get("/chat/chats")
+
+        console.log("!!!!!!!!!!!!!!!", res)
+
+        return res.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+//POST
 export const createNewChat = async () => {
     try {
         console.log("creating new chat")
@@ -24,8 +39,6 @@ export const sendChatMessage = async (message, sessionId) => {
         throw error
     }
 }
-
-
 
 
 

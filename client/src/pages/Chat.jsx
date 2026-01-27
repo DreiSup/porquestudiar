@@ -50,8 +50,8 @@ const Chat = () => {
       }
     
       useEffect(() => {
-        console.log("ESTO ES EL USESTATE DE MESSAGES:",chatContext?.messages)
-      }, [chatContext?.messages])
+        console.log("ESTO ES EL USESTATE DE CHATS:",chatContext?.chats)
+      }, [chatContext?.chats])
       
     
       return (

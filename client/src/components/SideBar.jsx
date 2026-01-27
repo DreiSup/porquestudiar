@@ -18,6 +18,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem,
 import { DropdownMenuTrigger } from "./ui/dropdown-menu"
 import { useAuth } from "@/context/AuthContext"
 import { Button } from "./ui/button"
+import { useEffect } from "react"
 
 const SideBar = () => {
 
@@ -56,8 +57,7 @@ const SideBar = () => {
 
   const auth = useAuth()
   const chatContext = useChat()
-
-  /* console.log(chatContext) */
+  
 
   const handleNewChat = async () => {
     try {
@@ -75,6 +75,42 @@ const SideBar = () => {
       console.log(error)
     }
   }
+
+
+  useEffect(() => {
+    console.log(chatContext?.chats)
+    if (auth?.isLoggedIn && auth?.user) {
+
+      const fetchAndSelectChats = async () => {
+        try {
+          
+          const res = await chatContext?.getAllChats();
+
+          console.log("!!!!!",res)
+
+          let chatsFromServer = res.sortedChats
+
+          if (chatsFromServer.length > 0) {
+            const lastChat = chatsFromServer[0];
+            console.log("last chat: ", lastChat.id)
+            chatContext?.setSelectedChatId(lastChat.id)
+            chatContext?.setChats(chatsFromServer)
+          } else {
+          // B) Si NO existen chats, creamos uno nuevo automáticamente
+          console.log("No hay chats, creando uno por defecto...");
+          handleNewChat(); // Reutilizamos tu función de crear
+        } 
+
+        } catch (error) {
+          console.log("Error loading chats at sidebar", error)
+        }
+      }
+
+      fetchAndSelectChats()
+    }
+    //eslint-disable-next-line
+  },[auth?.isLoggedIn, auth?.user])
+
 
   const handleDeleteChat = async (id) => {
     console.log("Tryng to delete chat...", id)
@@ -127,7 +163,7 @@ const SideBar = () => {
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {chatContext?.chats.map((chat) => (
+              {chatContext?.chats?.map((chat) => (
                 <SidebarMenuItem key={chat._id}>
                   <SidebarMenuButton 
                     onClick={()=> chatContext?.selectChat(chat.id)}

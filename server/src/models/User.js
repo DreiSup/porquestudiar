@@ -13,7 +13,9 @@ const chatSchema = new mongoose.Schema({
     },
     title: {type: String, required: true},
     messages: [messageSchema]
-});
+    }, {
+        timestamps: true
+    });
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -31,7 +33,7 @@ const userSchema = new mongoose.Schema({
     },
     profilePic: {
         type: String,
-        default: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+        default: "https://api.dicebear.com/9.x/avataaars/svg"
     },
     chats: {type: [chatSchema], default: []}
 })
