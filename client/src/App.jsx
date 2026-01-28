@@ -13,12 +13,10 @@ import LoadingScreen from './components/LoadingScreen';
 
 function App() {
 
-  const {loading} = useAuth()
 
   
   return (
       <main className="flex-1 flex flex-col min-h-screen min-w-0 dark">
-        {loading && <LoadingScreen/>}
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/signup' element={<SignUp/>}/>
