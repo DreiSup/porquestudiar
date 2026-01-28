@@ -26,7 +26,26 @@ export const getUserChats = async (req,res) => {
 
 
 export const getUniqueChat = async (req, res) => {
-    
+    try {
+        const chatId = req.params.id
+
+        const user = await User.findById(res.locals.jwtData.id);
+        if (!user) {
+            return res.status(401).json({ message: "Usuario no registrado o Token inválido" });
+        }
+
+        const chat = user.chats.find(c => c.id === chatId || c._id.toString() === chatId);
+
+        if (!chat) {
+          return res.status(404).json({ message: "Chat no encontrado" });
+        }
+
+        return res.status(200).json({ message: "OK", chat });
+
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ message: "Error trying to get chat", error: error.message });
+    }
 }
 
 
@@ -142,23 +161,26 @@ export const generateChatCompletion = async (req, res) => {
 //PUT
 export const changeChatTitle = async (req, res) => {
     try {
-        const userId = await User.findById(res.locals.jwtData.id)
+        const user = await User.findById(res.locals.jwtData.id)
 
         if (!user) {
-        return res.status(401).json({ message: "Usuario no registrado" });
+        return res.status(401).json({ message: "User not registered" });
         }
 
         const chatId = req.params.id
         const {title} = req.body;
+        
+        console.log("chatid: ",chatId)
+        console.log("title: ",title)
 
         if (!title) {
             return res.status(400).json({ message: "Titol required" });
         }
 
-        const user = await User.findOneAndUpdate(
+        const userToModify = await User.findOneAndUpdate(
             {
-                _id: userId,
-                "chats.id": chatId
+                _id: user.id,
+                "chats._id": chatId
             },
             {
                 $set: {
@@ -168,7 +190,9 @@ export const changeChatTitle = async (req, res) => {
             {new: true}
         );
 
-        if (!user) {
+        console.log(userToModify)
+
+        if (!userToModify) {
             return res.status(404).json({ message: "Chat not found or unauthorized" });
         }
 

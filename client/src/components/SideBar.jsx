@@ -18,7 +18,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem,
 import { DropdownMenuTrigger } from "./ui/dropdown-menu"
 import { useAuth } from "@/context/AuthContext"
 import { Button } from "./ui/button"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const SideBar = () => {
 
@@ -57,6 +57,49 @@ const SideBar = () => {
 
   const auth = useAuth()
   const chatContext = useChat()
+
+  const [editingChatId, setEditingChatId ] = useState(null)
+  const [editTitle, setEditTitle] = useState("");
+
+  const startEditing = (chat, e) => {
+    e.stopPropagation(); // Evita que se seleccione el chat al dar click en editar
+    setEditingChatId(chat._id || chat.id);
+    setEditTitle(chat.title);
+  };
+
+  const handleSaveTitle = async (id) => {
+    if (!editTitle.trim()) {
+        setEditingChatId(null); // Si está vacío, cancelamos
+        return;
+    }
+    
+    try {
+      // 1. Llamada a tu API (Endpoint PATCH que creamos antes)
+      // Asumo que tienes apiClient, si no usa chatContext.updateTitle(id, editTitle)
+      // await apiClient.patch(`/chat/title/${id}`, { title: editTitle });
+      
+      // Si tienes la función en el context:
+      await chatContext?.updateChatTitle(id, editTitle); 
+
+      // 2. Actualizar estado local visualmente (para no recargar)
+      chatContext?.setChats(prev => prev.map(c => 
+        (c._id === id || c.id === id) ? { ...c, title: editTitle } : c
+      ));
+
+    } catch (error) {
+      console.error("Error actualizando título", error);
+    } finally {
+      setEditingChatId(null); // Salir del modo edición
+    }
+  };
+
+  const handleKeyDown = (e, id) => {
+    if (e.key === 'Enter') {
+      handleSaveTitle(id);
+    } else if (e.key === 'Escape') {
+      setEditingChatId(null);
+    }
+  };
   
 
   const handleNewChat = async () => {
@@ -111,6 +154,15 @@ const SideBar = () => {
     //eslint-disable-next-line
   },[auth?.isLoggedIn, auth?.user])
 
+  const handleEditChatTitle = async (chatId) => {
+    try {
+      const data = await chatContext?.getOneChat(chatId)
+
+      console.log("DATA FROM SIDEBAR COMPONENT, GET ONE CHAT:", data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const handleDeleteChat = async (id) => {
     console.log("Tryng to delete chat...", id)
@@ -171,9 +223,22 @@ const SideBar = () => {
                     className="cursor-pointer"
                   >
                     <MessageSquare className="size-4" />
-                    <span className="truncate font-medium">
-                        {chat.title || "Conversación sin título"}
-                    </span>
+                    {editingChatId === (chat._id || chat.id) ? (
+                      <input 
+                        type="text"
+                        value={editTitle}
+                        onChange={(e) => setEditTitle(e.target.value)}
+                        onBlur={() => handleSaveTitle(chat._id || chat.id)} // Guardar al hacer click fuera
+                        onKeyDown={(e) => handleKeyDown(e, chat._id || chat.id)}
+                        onClick={(e) => e.stopPropagation()} // Importante: para no disparar el selectChat
+                        autoFocus
+                        className="bg-transparent border border-gray-600 rounded px-1 w-full text-white focus:outline-none focus:border-amber-600 h-6 text-sm"
+                      />
+                    ) : (
+                      <span className="truncate font-medium">
+                          {chat.title || "Conversación sin título"}
+                      </span>
+                    )}
                   </SidebarMenuButton>
                   <DropdownMenu>
                      <DropdownMenuTrigger asChild>
@@ -183,7 +248,12 @@ const SideBar = () => {
                      </DropdownMenuTrigger>
                      <DropdownMenuContent side="right" align="start" className="bg-black border-black text-white shadow-xl">
                         <DropdownMenuItem>
-                          <span>Edit</span>
+                          <span
+                            onClick={(e) => startEditing(chat, e)}
+                            className="cursor-pointer"
+                          >
+                            Edit Title
+                          </span>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                           <span

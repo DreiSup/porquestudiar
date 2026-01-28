@@ -15,6 +15,18 @@ export const getUserChats = async () => {
     }
 }
 
+export const getUniqueChat = async (chatId) => {
+    try {
+        const res = await api.get(`/chat/${chatId}`)
+
+        console.log(res)
+        return res.data.chat
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
 
 //POST
 export const createNewChat = async () => {
@@ -37,6 +49,18 @@ export const sendChatMessage = async (message, sessionId) => {
     } catch (error) {
         console.log("Something went wrong", error)
         throw error
+    }
+}
+
+
+//PATCH
+export const changeChatTitle = async (id, editTitle) => {
+    try {
+        const res = await api.patch(`/chat/${id}`, { title: editTitle });
+        console.log(res)
+        return res.data
+    } catch (error) {
+        console.log(error)
     }
 }
 
