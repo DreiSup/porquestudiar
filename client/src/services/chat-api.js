@@ -44,6 +44,7 @@ export const createNewChat = async () => {
 
 export const sendChatMessage = async (message, sessionId) => {
     try{
+        console.log("DESDE CHAT-API:", message, sessionId)
         const response = await api.post('/chat', { message: message, sessionId: sessionId })
         return response.data
     } catch (error) {

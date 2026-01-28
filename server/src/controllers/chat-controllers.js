@@ -98,9 +98,33 @@ export const postMessage = async (req, res) => {
             const chat = user.chats.find(c => c.id === sessionId)
             if (!chat) return res.status(404).json({error: "Chat not found"})
 
-            console.log("this is chat:", chat)
+            /* console.log("this is chat:", chat) */
 
             chat.messages.push({role: "user", content: message})
+
+
+            //LOGICA QUE VERIFICA SI ES EL 1ER MENSAJE, Y CAMBIA chat.title
+            if (chat.messages.length <= 1 || chat.title === "Nuevo Chat" || chat.title === "Conversación sin título") {
+            
+                // Dividimos el mensaje en palabras, quitando espacios extra
+                const words = message.trim().split(/\s+/);
+                let newTitle = "";
+
+                if (words.length > 0) {
+                    if (words.length === 1) {
+                        // Si es solo una palabra: "Hola"
+                        newTitle = words[0];
+                    } else {
+                        // Si son más, tomamos las primeras 3
+                        newTitle = words.slice(0, 3).join(" ");
+                    }
+
+                    // Capitalizamos la primera letra (opcional, por estética)
+                    chat.title = newTitle.charAt(0).toUpperCase() + newTitle.slice(1);
+                    
+                    console.log(`[LOG] Título del chat actualizado a: "${chat.title}"`);
+                }
+            }
 
             //Llamamos al servicio de Bedrock, y responde
             const responseAI = await invokeAgent(message, sessionId);
@@ -221,6 +245,8 @@ export const deleteChat = async (req, res) => {
 
         const initialCount = user.chats.length;
         user.chats = user.chats.filter(chat => chat.id !== id)
+
+        user.chats.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
 
         if (user.chats.length === initialCount) {
             return res.status(404).json({error: "Chat did not exist in th DB"})

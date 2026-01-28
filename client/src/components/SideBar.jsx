@@ -22,39 +22,6 @@ import { useEffect, useState } from "react"
 
 const SideBar = () => {
 
-  /*   const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
-  },
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-  {
-    title: "Add new chat",
-    url:"#",
-    icon: Settings,
-  }
-] */
-
   const auth = useAuth()
   const chatContext = useChat()
 
@@ -64,7 +31,7 @@ const SideBar = () => {
   const startEditing = (chat, e) => {
     e.stopPropagation(); // Evita que se seleccione el chat al dar click en editar
     setEditingChatId(chat._id || chat.id);
-    setEditTitle(chat.title);
+    setEditTitle(chat.title || "Title");
   };
 
   const handleSaveTitle = async (id) => {
@@ -114,12 +81,14 @@ const SideBar = () => {
         chatContext?.setMessages([])
       }
 
+      console.log(chatContext?.selectedChatId)
+
     } catch (error) {
       console.log(error)
     }
   }
 
-
+//USEEFECT PARA EL PRIMER LOGIN, SELECCIONAR CHAT POR DEFECTO
   useEffect(() => {
     console.log(chatContext?.chats)
     if (auth?.isLoggedIn && auth?.user) {
@@ -154,18 +123,9 @@ const SideBar = () => {
     //eslint-disable-next-line
   },[auth?.isLoggedIn, auth?.user])
 
-  const handleEditChatTitle = async (chatId) => {
-    try {
-      const data = await chatContext?.getOneChat(chatId)
-
-      console.log("DATA FROM SIDEBAR COMPONENT, GET ONE CHAT:", data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const handleDeleteChat = async (id) => {
+  const handleDeleteChat = async (id, e) => {
     console.log("Tryng to delete chat...", id)
+      e?.stopPropagation();
 
     try {
       const data = await chatContext?.deleteChat(id)
@@ -257,7 +217,7 @@ const SideBar = () => {
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                           <span
-                            onClick={() => handleDeleteChat(chat.id)}
+                            onClick={(e) => handleDeleteChat(chat.id, e)}
                           >
                             Delete
                           </span>

@@ -45,6 +45,8 @@ const Chat = () => {
         const textToSend = input;
         setInput("");
 
+        console.log("selected chat desde Chat.jsx:", chatContext?.selectedChatId)
+
         await chatContext?.sendMessage(textToSend)
         
       }

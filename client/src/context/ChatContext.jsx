@@ -22,8 +22,8 @@ export const ChatProvider = ({children}) => {
         console.log("chats desde ChatContent:", chats); */
         if (user && user?.chats) {
             console.log(user?.chats)
-            setChats(user.chats)
-            
+            const sorted = [...user.chats].sort((a,b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+            setChats(sorted);
         } else {
             /* navigate("/login") */
         }
@@ -106,9 +106,14 @@ export const ChatProvider = ({children}) => {
 
             const otherChats = prevChats.filter(c => (c.id) !== selectedChatId)
 
+            const newTitleFromBackend = data.chatTitle;
+
             const updatedChat = {
                 ...currentChat,
-                updatedAt: new Date().toISOString()
+                updatedAt: new Date().toISOString(),
+                title: (newTitleFromBackend && newTitleFromBackend !== currentChat.title)
+                    ? newTitleFromBackend 
+                    : currentChat.title
             }
 
             return [updatedChat, ...otherChats]
@@ -137,9 +142,33 @@ export const ChatProvider = ({children}) => {
             const data = await deleteOneChat(id)
 
             if (data.ok) {
-                setChats(data.chats)
+                const updatedChats = data.chats || [];
+                setChats(updatedChats)
+
+                if (selectedChatId === id) {
+                    if (updatedChats.length > 0) {
+                        // Como el backend los devuelve ordenados por updatedAt, 
+                        // el índice [0] es el último chat utilizado.
+                        const nextChat = updatedChats[0];
+                        
+                        // Actualizamos el ID seleccionado
+                        setSelectedChatId(nextChat.id);
+                        
+                        // Actualizamos los mensajes con los del nuevo chat seleccionado
+                        setMessages(nextChat.messages || []);
+                        
+                        console.log("Cambiando al chat más reciente:", nextChat.id);
+                    } else {
+                        // Si no quedan más chats, limpiamos la selección y los mensajes
+                        setSelectedChatId(null);
+                        setMessages([]);
+                    }
+                }
             }
             
+            
+            
+
             console.log(data)
         } catch (error) {
             console.log(error)
