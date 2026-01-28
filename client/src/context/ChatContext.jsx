@@ -53,8 +53,6 @@ export const ChatProvider = ({children}) => {
 
     const createChat = async () => {
 
-        setIsLoading(true)
-
         try {
             const data = await createNewChat()
             setChats([...chats, data.chat])

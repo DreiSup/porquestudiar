@@ -231,7 +231,7 @@ const SideBar = () => {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        {!auth?.isLoading && auth?.isLoggedIn && auth?.user
+        {auth?.isLoggedIn && auth?.user
           ? 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

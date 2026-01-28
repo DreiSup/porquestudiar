@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import {randomUUID} from 'crypto'
+import {randomBytes, randomUUID} from 'crypto'
 
 const messageSchema =new mongoose.Schema({
     role: {type: String, required: true},
@@ -33,7 +33,10 @@ const userSchema = new mongoose.Schema({
     },
     profilePic: {
         type: String,
-        default: "https://api.dicebear.com/9.x/avataaars/svg"
+        default: () => {
+            const seed = randomBytes(8).toString('hex');
+            return `https://api.dicebear.com/9.x/avataaars/svg?seed=${seed}`;
+        }
     },
     chats: {type: [chatSchema], default: []}
 })
