@@ -87,37 +87,49 @@ const SideBar = () => {
 
 //USEEFECT PARA EL PRIMER LOGIN, SELECCIONAR CHAT POR DEFECTO
   useEffect(() => {
-    console.log(chatContext?.chats)
+    // 1. Solo actuamos si el usuario está realmente autenticado y tenemos su ID
+    // Usar auth?.user?.id es más seguro que solo auth?.user
     if (auth?.isLoggedIn && auth?.user) {
 
       const fetchAndSelectChats = async () => {
         try {
+          console.log("Iniciando carga de chats para el usuario:", auth.user.id);
           
           const res = await chatContext?.getAllChats();
+          
+          // 2. Validación de seguridad para la respuesta
+          if (!res || !res.sortedChats) {
+            console.log("La respuesta del servidor no trajo chats");
+            chatContext?.setChats([]); // Limpiamos por si acaso
+            return;
+          }
 
-          console.log("!!!!!",res)
+          const chatsFromServer = res.sortedChats;
+          console.log("Chats recibidos:", chatsFromServer.length);
 
-          let chatsFromServer = res.sortedChats
+          // 3. Siempre actualizamos el estado de chats, aunque sea []
+          chatContext?.setChats(chatsFromServer);
 
           if (chatsFromServer.length > 0) {
             const lastChat = chatsFromServer[0];
-            console.log("last chat: ", lastChat.id)
-            chatContext?.setSelectedChatId(lastChat.id)
-            chatContext?.setChats(chatsFromServer)
+            // 4. Sincronizamos ID y Mensajes del tirón
+            chatContext?.setSelectedChatId(lastChat.id);
+            // Opcional: Si tienes setMessages en el context, cárgalos aquí también
+            // chatContext?.setMessages(lastChat.messages || []);
           } else {
-          // B) Si NO existen chats, creamos uno nuevo automáticamente
-          console.log("No hay chats");
-        } 
+            console.log("El usuario no tiene chats todavía.");
+            // Aquí es donde podrías llamar a handleNewChat() si quieres uno automático
+          }
 
         } catch (error) {
-          console.log("Error loading chats at sidebar", error)
+          console.error("Error cargando chats en el sidebar:", error);
         }
-      }
+      };
 
-      fetchAndSelectChats()
+      fetchAndSelectChats();
     }
-    //eslint-disable-next-line
-  },[auth?.isLoggedIn, auth?.user])
+    // Añadimos auth?.user?.id para que el efecto se dispare exactamente cuando el ID esté listo
+  }, [auth?.isLoggedIn, auth?.user?.id]);
 
   const handleDeleteChat = async (id, e) => {
     console.log("Tryng to delete chat...", id)
