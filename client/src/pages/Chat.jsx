@@ -3,7 +3,6 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/s
 import SideBar from '@/components/SideBar.jsx';
 import ChatHeader from '@/components/ChatHeader.jsx';
 import { useChat } from '@/context/ChatContext.jsx';
-import { useAuth } from '@/context/AuthContext';
 import { Field, FieldLabel } from '@/components/ui/field';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,10 +12,7 @@ import { ButtonGroup } from '@/components/ui/button-group';
 const Chat = () => {
     const [input, setInput] = useState("");
       const chatEndRef = useRef(null)
-    
-      const [sessionId, setSessionId] = useState("")
 
-      const auth = useAuth()
       const chatContext = useChat()
     
       useEffect(() => {
@@ -44,7 +40,7 @@ const Chat = () => {
       useEffect(() => {
         console.log("ESTO ES EL USESTATE DE CHATS:",chatContext?.chats)
         console.log("Use effect, este es el chat renderizado: ", chatContext?.selectedChatId, "Y estos son los mensajes: ", chatContext?.messages);
-        
+        // eslint-disable-next-line
       }, [chatContext?.chats])
       
     

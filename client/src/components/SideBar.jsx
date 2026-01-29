@@ -135,16 +135,16 @@ const SideBar = () => {
     }
   }
 
-    const getInitials = () => {
+    /* const getInitials = () => {
         if (!auth?.user || !auth?.user.name) return "U"; // U de User por defecto
         return auth?.user.name.substring(0, 2).toUpperCase();
-    }
+    } */
 
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Acciones</SidebarGroupLabel>
+          <SidebarGroupLabel>Actions</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -153,7 +153,7 @@ const SideBar = () => {
                     className="border border-sidebar-border shadow-sm hover:bg-sidebar-accent"
                 >
                   <Plus className="text-white" /> {/* Icono destacado */}
-                  <span className="font-bold">Nuevo Chat</span>
+                  <span className="font-bold">New chat</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

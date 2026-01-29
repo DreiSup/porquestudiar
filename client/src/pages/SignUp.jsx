@@ -13,10 +13,10 @@ import { toast } from "sonner"
 import { Form, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import { useAuth } from "@/context/AuthContext"
+import img from "../../public/Image.png"
 
 const SignUp = (className, ...props) => {
 
-  const [errorMessage, setErrorMessage] = useState("")
   const [formData, setFormData] = useState({
       name: "",
       email: "",
@@ -33,12 +33,10 @@ const SignUp = (className, ...props) => {
 
   const handleSubmit = async (e) => {
       e.preventDefault();
-      setErrorMessage("")
 
       console.log("froooontendd")
       //Validación básica cliente
       if (formData.password !== formData.confirmpassword) {
-          setErrorMessage("Las contraseñas no coinciden")
           toast.error("Passwords do not match")
           return 
       }
@@ -63,7 +61,6 @@ const SignUp = (className, ...props) => {
       } catch (error) {
           console.log(error.status)
           if (error && error.status == 409) {
-            setErrorMessage('Este email ya está registrado')
             toast.error("This email is already registered")
           } else{
             console.log("Ha habido un error al registrarte: ", error)
@@ -176,7 +173,7 @@ const SignUp = (className, ...props) => {
               </form>
               <div className="bg-muted relative hidden md:block">
                 <img
-                  src="/placeholder.svg"
+                  src={img}
                   alt="Image"
                   className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
                 />

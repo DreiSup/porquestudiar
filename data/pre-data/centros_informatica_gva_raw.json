@@ -1,0 +1,3760 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210146,
+                "codCentro": "46017304",
+                "nombreCentro": "CENTRE PRIVAT COMENIUS CENTRE EDUCATIU",
+                "direccion": "MÚSICO JARQUE CUALLADÓ, 9",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46017304&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.383827,
+                    39.488637
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 208430,
+                "codCentro": "46010191",
+                "nombreCentro": "CENTRE PRIVAT ESCLAVAS DE MARÍA",
+                "direccion": "AYORA, 24",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46010191&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.39296,
+                    39.465462
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207458,
+                "codCentro": "46006422",
+                "nombreCentro": "CENTRE PRIVAT ESCUELA PROFESIONAL LA SALLE",
+                "direccion": "SAN MARTÍN, 56",
+                "familiaId": null,
+                "numPlazas": 52,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46006422&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PATERNA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.438989,
+                    39.508478
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209096,
+                "codCentro": "46012938",
+                "nombreCentro": "CENTRE PRIVAT ESCUELAS PROFESIONALES DE ARTESANOS",
+                "direccion": "REGNE DE VALENCIA, 40-42",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46012938&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.369346,
+                    39.463743
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 205916,
+                "codCentro": "46000638",
+                "nombreCentro": "CENTRE PRIVAT FLORIDA CAMPUS ALZIRA",
+                "direccion": "PROFESSOR BERNAT MONTAGUD, 3",
+                "familiaId": null,
+                "numPlazas": 240,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46000638&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALZIRA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.437511,
+                    39.156105
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207959,
+                "codCentro": "46008352",
+                "nombreCentro": "CENTRE PRIVAT FP  ACADEMIA ALMI",
+                "direccion": "SAN LUIS, 89",
+                "familiaId": null,
+                "numPlazas": 56,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46008352&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "TAVERNES DE LA VALLDIGNA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.262846,
+                    39.076559
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212570,
+                "codCentro": "46025866",
+                "nombreCentro": "CENTRE PRIVAT FP  GARCÍA IBÁÑEZ",
+                "direccion": "JUAN RAMÓN JIMÉNEZ, 19",
+                "familiaId": null,
+                "numPlazas": 44,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025866&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "GANDIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.178539,
+                    38.973965
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 202466,
+                "codCentro": "12000959",
+                "nombreCentro": "CENTRE PRIVAT FP ACADEMIA DIDÁCTICA",
+                "direccion": "RIBALTA, 10",
+                "familiaId": null,
+                "numPlazas": 150,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12000959&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.043489,
+                    39.988399
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212612,
+                "codCentro": "46026101",
+                "nombreCentro": "CENTRE PRIVAT FP ARRIMA",
+                "direccion": "GOYA, 3",
+                "familiaId": null,
+                "numPlazas": 80,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46026101&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MONCADA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.396495,
+                    39.546122
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203564,
+                "codCentro": "12005431",
+                "nombreCentro": "CENTRE PRIVAT FP AUDIO GIL 10",
+                "direccion": "PÉREZ GALDÓS, 7",
+                "familiaId": null,
+                "numPlazas": 100,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005431&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.043924,
+                    39.985974
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1144895361,
+                "codCentro": "46037066",
+                "nombreCentro": "CENTRE PRIVAT FP CAMPUS CÁMARA FP",
+                "direccion": "BENJAMÍN FRANKLIN, 8",
+                "familiaId": null,
+                "numPlazas": 190,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46037066&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PATERNA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.459422,
+                    39.546945
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212543,
+                "codCentro": "46025775",
+                "nombreCentro": "CENTRE PRIVAT FP CAMPUS CENTRE D'ESTUDIS",
+                "direccion": "DEL RAJOLAR, S/N",
+                "familiaId": null,
+                "numPlazas": 560,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025775&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "BURJASSOT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.418366,
+                    39.511565
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1190648545,
+                "codCentro": "46037650",
+                "nombreCentro": "CENTRE PRIVAT FP CEAC",
+                "direccion": "DE LA ILUSTRACIÓN, 4",
+                "familiaId": null,
+                "numPlazas": 300,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46037650&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "BURJASSOT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.410073,
+                    39.501552
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212243,
+                "codCentro": "46024771",
+                "nombreCentro": "CENTRE PRIVAT FP CENTRO DE ESTUDIOS AYA 2013",
+                "direccion": "MARQUERET, 5",
+                "familiaId": null,
+                "numPlazas": 80,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46024771&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PUÇOL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.310428,
+                    39.616384
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211523,
+                "codCentro": "46022427",
+                "nombreCentro": "CENTRE PRIVAT FP C.ESTUDIOS FINANCIEROS",
+                "direccion": "ALBORAIA, 23",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022427&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.370601,
+                    39.482353
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 617931850,
+                "codCentro": "12007942",
+                "nombreCentro": "CENTRE PRIVAT FP CEU SAN PABLO CASTELLÓN",
+                "direccion": "CIUDAD DEL TRANSPORTE II, C. GRECIA, 31",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12007942&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.07489,
+                    39.978181
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 617931853,
+                "codCentro": "46035252",
+                "nombreCentro": "CENTRE PRIVAT FP CEU SAN PABLO VALENCIA",
+                "direccion": "LLUIS VIVES (EDIF. LUIS CAMPOS GORRÁIZ), 1",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46035252&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MONCADA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.386671,
+                    39.547434
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199049,
+                "codCentro": "03009300",
+                "nombreCentro": "CENTRE PRIVAT FP COTS",
+                "direccion": "VILLEGAS, 4",
+                "familiaId": null,
+                "numPlazas": 80,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03009300&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.485126,
+                    38.345384
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 375806006,
+                "codCentro": "46034740",
+                "nombreCentro": "CENTRE PRIVAT FP EUROPEO DE VALENCIA",
+                "direccion": "GENERAL ELIO (EDIFICI B), 2",
+                "familiaId": null,
+                "numPlazas": 80,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46034740&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.366445,
+                    39.478568
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 288624473,
+                "codCentro": "03019500",
+                "nombreCentro": "CENTRE PRIVAT FP FEMPA",
+                "direccion": "BENIJÓFAR (POL. IND. AGUA AMARGA), 4-6",
+                "familiaId": null,
+                "numPlazas": 130,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03019500&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.532922,
+                    38.302562
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210164,
+                "codCentro": "46017365",
+                "nombreCentro": "CENTRE PRIVAT FP FLORIDA, CENTRE E.SECUNDARI-TÈCNIC PROF.",
+                "direccion": "REI EN JAUME I, 2",
+                "familiaId": null,
+                "numPlazas": 660,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46017365&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CATARROJA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.412234,
+                    39.402551
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200414,
+                "codCentro": "03014666",
+                "nombreCentro": "CENTRE PRIVAT FP HEMEROSCOPEA",
+                "direccion": "DEL MEDITERRÁNEO, 136",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014666&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "TEULADA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.10481,
+                    38.726945
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 404819160,
+                "codCentro": "03019871",
+                "nombreCentro": "CENTRE PRIVAT FP IG FORMACIÓN",
+                "direccion": "ENRIQUETA ORTEGA, 17",
+                "familiaId": null,
+                "numPlazas": 260,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03019871&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.49559,
+                    38.346591
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212573,
+                "codCentro": "46025878",
+                "nombreCentro": "CENTRE PRIVAT FP INFORLINGUA CENTER, SL.",
+                "direccion": "MARQUÉS DE DOS AGUAS, 38-42",
+                "familiaId": null,
+                "numPlazas": 120,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025878&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PICASSENT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.458261,
+                    39.365194
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1204004225,
+                "codCentro": "46037753",
+                "nombreCentro": "CENTRE PRIVAT FP MEDAC CAMPANAR",
+                "direccion": "ESCULTOR GARCÍA MAS, 2",
+                "familiaId": null,
+                "numPlazas": 240,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46037753&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.398498,
+                    39.485668
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1182943135,
+                "codCentro": "12008545",
+                "nombreCentro": "CENTRE PRIVAT FP MEDAC CASTELLÓN",
+                "direccion": "MORELLA, 66",
+                "familiaId": null,
+                "numPlazas": 120,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12008545&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.050259,
+                    39.989663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1186592529,
+                "codCentro": "03021889",
+                "nombreCentro": "CENTRE PRIVAT FP MEDAC ELCHE",
+                "direccion": "ILLUECA, 1",
+                "familiaId": null,
+                "numPlazas": 120,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03021889&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.71292,
+                    38.280329
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 303611271,
+                "codCentro": "46034363",
+                "nombreCentro": "CENTRE PRIVAT FP PROGRESA",
+                "direccion": "PINTOR BENEDITO, 10",
+                "familiaId": null,
+                "numPlazas": 300,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46034363&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.383341,
+                    39.465893
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1170293907,
+                "codCentro": "46037418",
+                "nombreCentro": "CENTRE PRIVAT FP PROGRESA II",
+                "direccion": "MARVÁ, 1",
+                "familiaId": null,
+                "numPlazas": 210,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46037418&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.382379,
+                    39.46315
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206561,
+                "codCentro": "46003172",
+                "nombreCentro": "CENTRE PRIVAT FP SOLVAM",
+                "direccion": "CERVANTES, 3",
+                "familiaId": null,
+                "numPlazas": 300,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46003172&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "QUART DE POBLET"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.44044,
+                    39.482829
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 227732138,
+                "codCentro": "46033681",
+                "nombreCentro": "CENTRE PRIVAT FP STUDIO",
+                "direccion": "ALBALAT DELS TARONGERS, 32",
+                "familiaId": null,
+                "numPlazas": 130,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46033681&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.347017,
+                    39.478159
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212603,
+                "codCentro": "46025970",
+                "nombreCentro": "CENTRE PRIVAT FP TAES",
+                "direccion": "VENTURA FELIU, 10-12",
+                "familiaId": null,
+                "numPlazas": 130,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025970&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.383062,
+                    39.462199
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212387,
+                "codCentro": "46025258",
+                "nombreCentro": "CENTRE PRIVAT FP TAME FORMACIÓN",
+                "direccion": "GREGORIO GEA, 61",
+                "familiaId": null,
+                "numPlazas": 300,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025258&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MISLATA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.420031,
+                    39.474351
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212480,
+                "codCentro": "46025568",
+                "nombreCentro": "CENTRE PRIVAT FP TOBALCAIDE",
+                "direccion": "JESÚS MORANTE BORRÁS, 14",
+                "familiaId": null,
+                "numPlazas": 80,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025568&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "QUART DE POBLET"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.436234,
+                    39.481968
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 1209825315,
+                "codCentro": "46037789",
+                "nombreCentro": "CENTRE PRIVAT FP XTART-GALENO SAN VICENTE MÁRTIR",
+                "direccion": "SAN VICENTE MARTIR, 148",
+                "familiaId": null,
+                "numPlazas": 420,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46037789&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.382473,
+                    39.4624
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 208451,
+                "codCentro": "46010267",
+                "nombreCentro": "CENTRE PRIVAT LA PURÍSIMA-FRANCISCANAS",
+                "direccion": "TRES CRUCES, 49",
+                "familiaId": null,
+                "numPlazas": 46,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46010267&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.405191,
+                    39.464216
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206888,
+                "codCentro": "46004395",
+                "nombreCentro": "CENTRE PRIVAT LUIS AMIGÓ",
+                "direccion": "DE BÉTERA, S/N",
+                "familiaId": null,
+                "numPlazas": 40,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46004395&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "GODELLA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.417041,
+                    39.527994
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198065,
+                "codCentro": "03004961",
+                "nombreCentro": "CENTRE PRIVAT NUESTRA SEÑORA DEL CARMEN",
+                "direccion": "ALGOROS.CRTA MATOLA, KM. 2",
+                "familiaId": null,
+                "numPlazas": 120,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03004961&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.718139,
+                    38.247584
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210005,
+                "codCentro": "46016762",
+                "nombreCentro": "CENTRE PRIVAT PROFESIONAL SOROLLA",
+                "direccion": "CARRERA MALILLA, 47",
+                "familiaId": null,
+                "numPlazas": 100,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46016762&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.379211,
+                    39.45006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 196910,
+                "codCentro": "03000424",
+                "nombreCentro": "CENTRE PRIVAT SALESIANOS JUAN XXIII",
+                "direccion": "SAN JUAN BOSCO, 37",
+                "familiaId": null,
+                "numPlazas": 23,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03000424&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALCOI"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.462327,
+                    38.708595
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 196922,
+                "codCentro": "03000473",
+                "nombreCentro": "CENTRE PRIVAT SANT ROC",
+                "direccion": "ESPRONCEDA, 1",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03000473&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALCOI"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.481553,
+                    38.698557
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212549,
+                "codCentro": "46025799",
+                "nombreCentro": "CENTRE PÚBLIC D'EDUCACIÓ A DISTÀNCIA CEED",
+                "direccion": "CASA DE LA MISERICORDIA, 34",
+                "familiaId": null,
+                "numPlazas": 225,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025799&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.410314,
+                    39.464551
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198362,
+                "codCentro": "03006177",
+                "nombreCentro": "CENTRO PRIVADO ESCUELA FAMILIAR AGRARIA EL CAMPICO",
+                "direccion": "EL CAMPICO, S/N",
+                "familiaId": null,
+                "numPlazas": 390,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03006177&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "JACARILLA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.868923,
+                    38.053392
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211313,
+                "codCentro": "46021711",
+                "nombreCentro": "CIPFP AUSIÀS MARCH",
+                "direccion": "ÁNGEL DE VILLENA, S/N",
+                "familiaId": null,
+                "numPlazas": 234,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46021711&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.368523,
+                    39.448039
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199793,
+                "codCentro": "03012165",
+                "nombreCentro": "CIPFP BATOI",
+                "direccion": "SOCIETAT UNIÓ MUSICAL, 8",
+                "familiaId": null,
+                "numPlazas": 336,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03012165&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALCOI"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.496207,
+                    38.690999
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210509,
+                "codCentro": "46018761",
+                "nombreCentro": "CIPFP COMPLEJO EDUCATIVO DE CHESTE",
+                "direccion": "CV-378 - KM. 0,300",
+                "familiaId": null,
+                "numPlazas": 240,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46018761&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CHESTE"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.645962,
+                    39.480394
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 205949,
+                "codCentro": "46000754",
+                "nombreCentro": "CIPFP LUIS SUÑER SANCHIS",
+                "direccion": "DELS ESPORTS, 27",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46000754&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALZIRA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.430752,
+                    39.166104
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210749,
+                "codCentro": "46019660",
+                "nombreCentro": "CIPFP MISLATA",
+                "direccion": "DOLORES IBARRURI, 32",
+                "familiaId": null,
+                "numPlazas": 324,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46019660&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MISLATA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.421965,
+                    39.481661
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200459,
+                "codCentro": "03014812",
+                "nombreCentro": "CIPFP VALLE DE ELDA",
+                "direccion": "DE SAX, 37",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014812&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELDA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.80301,
+                    38.491226
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212327,
+                "codCentro": "46025040",
+                "nombreCentro": "IES ABASTOS",
+                "direccion": "ALBERIQUE, 18",
+                "familiaId": null,
+                "numPlazas": 654,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46025040&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.388448,
+                    39.467955
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211988,
+                "codCentro": "46023924",
+                "nombreCentro": "IES ALCALANS",
+                "direccion": "PESSET ALEIXANDRE, S/N",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46023924&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MONTSERRAT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.606229,
+                    39.356401
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 202286,
+                "codCentro": "12000251",
+                "nombreCentro": "IES ÁLVARO FALOMIR",
+                "direccion": "BOQUERAS, 239",
+                "familiaId": null,
+                "numPlazas": 335,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 4,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12000251&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "ALMASSORA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.065135,
+                    39.952361
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 197291,
+                "codCentro": "03001911",
+                "nombreCentro": "IES ANTONIO JOSÉ CAVANILLES",
+                "direccion": "ALCALDE LORENZO CARBONELL, 32-34",
+                "familiaId": null,
+                "numPlazas": 216,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03001911&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.507538,
+                    38.339367
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 197432,
+                "codCentro": "03002445",
+                "nombreCentro": "IES ANTONIO SEQUEROS",
+                "direccion": "COMUNIDAD VALENCIANA, 55",
+                "familiaId": null,
+                "numPlazas": 192,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03002445&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALMORADÍ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.786397,
+                    38.107957
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198101,
+                "codCentro": "03005094",
+                "nombreCentro": "IES ASUNCIÓN DE NUESTRA SEÑORA",
+                "direccion": "PROFESSOR EDUARDO VAQUERO, 2",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03005094&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.686399,
+                    38.261557
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200363,
+                "codCentro": "03014472",
+                "nombreCentro": "IES BEATRIU FAJARDO DE MENDOZA",
+                "direccion": "DE LA FRAGATA (SALT DE L'AIGUA), 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014472&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "BENIDORM"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.120163,
+                    38.554685
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203660,
+                "codCentro": "12005751",
+                "nombreCentro": "IES BENIGASLÓ",
+                "direccion": "ARCADI GARCÍA I SANZ, 1",
+                "familiaId": null,
+                "numPlazas": 144,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005751&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "VALL D'UIXÓ (LA)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.223986,
+                    39.820823
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206627,
+                "codCentro": "46003408",
+                "nombreCentro": "IES BLASCO IBÁÑEZ",
+                "direccion": "RAMIRO PEDRÓS FONT, 1",
+                "familiaId": null,
+                "numPlazas": 108,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46003408&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CULLERA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.246398,
+                    39.167818
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207797,
+                "codCentro": "46007748",
+                "nombreCentro": "IES CAMP DE MORVEDRE",
+                "direccion": "ABOGADO FAUSTO CARUANA, S/N",
+                "familiaId": null,
+                "numPlazas": 639,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46007748&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "SAGUNT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.246581,
+                    39.671405
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207014,
+                "codCentro": "46004841",
+                "nombreCentro": "IES CAMP DE TÚRIA",
+                "direccion": "DE MURA, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46004841&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "LLÍRIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.593021,
+                    39.629223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210929,
+                "codCentro": "46020406",
+                "nombreCentro": "IES CARLES SALVADOR",
+                "direccion": "MONESTIR DE POBLET, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46020406&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALDAIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.457606,
+                    39.461296
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199073,
+                "codCentro": "03009385",
+                "nombreCentro": "IES CARRÚS",
+                "direccion": "JOSÉ DÍEZ MORA, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03009385&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.709122,
+                    38.267955
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211475,
+                "codCentro": "46022257",
+                "nombreCentro": "IES CONSELLERIA",
+                "direccion": "MONESTIR DE POBLET, S/N",
+                "familiaId": null,
+                "numPlazas": 234,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022257&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.393158,
+                    39.485181
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211196,
+                "codCentro": "46021290",
+                "nombreCentro": "IES CONSUELO ARANDA",
+                "direccion": "MISANA, S/N",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46021290&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALBERIC"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.523138,
+                    39.12525
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212138,
+                "codCentro": "46024424",
+                "nombreCentro": "IES D'ALCÀSSER",
+                "direccion": "CORTS VALENCIANES, 51",
+                "familiaId": null,
+                "numPlazas": 24,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46024424&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALCÀSSER"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.440057,
+                    39.368547
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203603,
+                "codCentro": "12005568",
+                "nombreCentro": "IES D'ALMENARA",
+                "direccion": "DE L'INSTITUT, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005568&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "ALMENARA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.230798,
+                    39.751512
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 202322,
+                "codCentro": "12000406",
+                "nombreCentro": "IES DE BETXÍ",
+                "direccion": "SANT FRANCESC, 2",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12000406&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "BETXÍ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.202053,
+                    39.930822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211862,
+                "codCentro": "46023523",
+                "nombreCentro": "IES DE CÀRCER",
+                "direccion": "PROFESOR MANUEL BROSETA PONS, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46023523&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CÀRCER"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.564895,
+                    39.072112
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200567,
+                "codCentro": "03015142",
+                "nombreCentro": "IES DE PEDREGUER",
+                "direccion": "DELS ESMOLADORS, 3-5",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015142&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "PEDREGUER"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.045232,
+                    38.796871
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210902,
+                "codCentro": "46020315",
+                "nombreCentro": "IES DE PUÇOL",
+                "direccion": "CORTS VALENCIANES, 31",
+                "familiaId": null,
+                "numPlazas": 58,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46020315&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PUÇOL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.314709,
+                    39.61497
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211979,
+                "codCentro": "46023894",
+                "nombreCentro": "IES D'EL PUIG DE SANTA MARIA",
+                "direccion": "DE L'INSTITUT, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46023894&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PUIG DE SANTA MARIA (EL)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.308197,
+                    39.59175
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200174,
+                "codCentro": "03013819",
+                "nombreCentro": "IES DOCTOR BALMIS",
+                "direccion": "CERÁMICA, 24",
+                "familiaId": null,
+                "numPlazas": 468,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03013819&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.491263,
+                    38.361723
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 205790,
+                "codCentro": "46000161",
+                "nombreCentro": "IES DOCTOR FAUSTÍ BARBERÁ",
+                "direccion": "VICENTE LIS BARONA, S/N",
+                "familiaId": null,
+                "numPlazas": 96,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46000161&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALAQUÀS"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.461402,
+                    39.452213
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210491,
+                "codCentro": "46018692",
+                "nombreCentro": "IES DOCTOR LLUÍS SIMARRO LACABRA",
+                "direccion": "DE LES CORTS VALENCIANES, S/N",
+                "familiaId": null,
+                "numPlazas": 414,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46018692&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "XÀTIVA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.535412,
+                    38.986134
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206456,
+                "codCentro": "46002775",
+                "nombreCentro": "IES EDUARDO PRIMO MARQUÉS",
+                "direccion": "CORBELLA, 141",
+                "familiaId": null,
+                "numPlazas": 270,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46002775&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CARLET"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.519506,
+                    39.220493
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203318,
+                "codCentro": "12004217",
+                "nombreCentro": "IES EL CAMINÀS",
+                "direccion": "PINTOR SOLER BLASCO, 3",
+                "familiaId": null,
+                "numPlazas": 595,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12004217&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.028539,
+                    39.980565
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209618,
+                "codCentro": "46015290",
+                "nombreCentro": "IES EL GRAO",
+                "direccion": "ESCALANTE, 9",
+                "familiaId": null,
+                "numPlazas": 306,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46015290&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.332175,
+                    39.462016
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200687,
+                "codCentro": "03015543",
+                "nombreCentro": "IES EL PLA",
+                "direccion": "CIUDAD LEÓN DE NICARAGUA, 8",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015543&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.468088,
+                    38.361875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203594,
+                "codCentro": "12005532",
+                "nombreCentro": "IES EL PRAT",
+                "direccion": "GRAVADOR FABREGAT, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005532&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "TORREBLANCA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.203537,
+                    40.219609
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203657,
+                "codCentro": "12005741",
+                "nombreCentro": "IES EL TORRELLÓ",
+                "direccion": "SERRA D'ESPADÀ, S/N",
+                "familiaId": null,
+                "numPlazas": 24,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005741&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "ONDA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.2583,
+                    39.9684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 202718,
+                "codCentro": "12001903",
+                "nombreCentro": "IES ELS PORTS",
+                "direccion": "JAUME I, 3",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12001903&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "MORELLA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.105014,
+                    40.621021
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209888,
+                "codCentro": "46016312",
+                "nombreCentro": "IES ENRIC SOLER I GODES",
+                "direccion": "SISENA, S/N",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46016312&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "BENIFAIÓ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.42425,
+                    39.292445
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199916,
+                "codCentro": "03012785",
+                "nombreCentro": "IES ENRIC VALOR",
+                "direccion": "EMILIO CASTELAR, S/N",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03012785&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "MONÒVER"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.843343,
+                    38.432699
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198659,
+                "codCentro": "03007613",
+                "nombreCentro": "IES ENRIC VALOR",
+                "direccion": "DUANES, 17",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03007613&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "PEGO"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.111958,
+                    38.844788
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210473,
+                "codCentro": "46018631",
+                "nombreCentro": "IES ENRIQUE TIERNO GALVÁN",
+                "direccion": "DE BENIFARAIG, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46018631&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MONCADA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.392166,
+                    39.540352
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211991,
+                "codCentro": "46023936",
+                "nombreCentro": "IES ESCULTOR EN FRANCESC BADIA",
+                "direccion": "DE LA CREU, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46023936&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "FOIOS"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.354577,
+                    39.532934
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209744,
+                "codCentro": "46015733",
+                "nombreCentro": "IES FERNANDO III",
+                "direccion": "PINTOR PEDRO CAMARA, 19",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46015733&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "AYORA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.054536,
+                    39.054605
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209444,
+                "codCentro": "46014224",
+                "nombreCentro": "IES FONT DE SANT LLUÍS",
+                "direccion": "HERMANOS MARISTAS, 25",
+                "familiaId": null,
+                "numPlazas": 144,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46014224&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.364069,
+                    39.454122
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 202538,
+                "codCentro": "12001228",
+                "nombreCentro": "IES FRANCESC RIBALTA",
+                "direccion": "REI EN JAUME, 35",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12001228&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.039343,
+                    39.988325
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200576,
+                "codCentro": "03015178",
+                "nombreCentro": "IES GAIA",
+                "direccion": "ALCALDE RAMÓN ORTS GALÁN, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015178&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "SANT VICENT DEL RASPEIG"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.5161,
+                    38.396063
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209912,
+                "codCentro": "46016440",
+                "nombreCentro": "IES GONZALO ANAYA",
+                "direccion": "LES PALMERES POL.IND.VIRGEN DE LA SALUD, 1",
+                "familiaId": null,
+                "numPlazas": 60,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46016440&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "XIRIVELLA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.434754,
+                    39.46155
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207320,
+                "codCentro": "46005934",
+                "nombreCentro": "IES GREGORI MAIANS",
+                "direccion": "GABRIEL MIRÓ, 16",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46005934&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "OLIVA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.114492,
+                    38.922923
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211589,
+                "codCentro": "46022622",
+                "nombreCentro": "IES HENRI MATISSE",
+                "direccion": "ENRIC VALOR, S/N",
+                "familiaId": null,
+                "numPlazas": 96,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022622&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PATERNA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.449471,
+                    39.51029
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199031,
+                "codCentro": "03009233",
+                "nombreCentro": "IES HERMANOS AMORÓS",
+                "direccion": "AMBROSIO COTES, 22",
+                "familiaId": null,
+                "numPlazas": 96,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03009233&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "VILLENA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.873566,
+                    38.643917
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 197882,
+                "codCentro": "03004223",
+                "nombreCentro": "IES HISTORIADOR CHABÀS",
+                "direccion": "MANUEL VALLALTA, 3",
+                "familiaId": null,
+                "numPlazas": 180,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03004223&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "DÉNIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.099419,
+                    38.830815
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210935,
+                "codCentro": "46020421",
+                "nombreCentro": "IES HORT DE FELIU",
+                "direccion": "FOTOGRAFO ISMAEL LATORRE, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46020421&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALGINET"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.463014,
+                    39.267231
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200147,
+                "codCentro": "03013716",
+                "nombreCentro": "IES IFACH",
+                "direccion": "CASA NOVA, 7",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03013716&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "CALP"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.048891,
+                    38.646858
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209135,
+                "codCentro": "46013086",
+                "nombreCentro": "IES ISABEL DE VILLENA",
+                "direccion": "ISABEL DE VILLENA, 4",
+                "familiaId": null,
+                "numPlazas": 66,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46013086&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.325695,
+                    39.478593
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212126,
+                "codCentro": "46024382",
+                "nombreCentro": "IES ISABEL-CLARA SIMÓ",
+                "direccion": "SENYERA, 1",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46024382&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALCÚDIA DE CRESPINS (L')"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.594206,
+                    38.970437
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 202397,
+                "codCentro": "12000704",
+                "nombreCentro": "IES JAUME I",
+                "direccion": "LLOMBAI, 21",
+                "familiaId": null,
+                "numPlazas": 96,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12000704&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "BORRIANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.08969,
+                    39.882427
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207956,
+                "codCentro": "46008340",
+                "nombreCentro": "IES JAUME II EL JUST",
+                "direccion": "CAMÍ DE LA DULA, 31",
+                "familiaId": null,
+                "numPlazas": 438,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46008340&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "TAVERNES DE LA VALLDIGNA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.25942,
+                    39.077126
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203117,
+                "codCentro": "12003390",
+                "nombreCentro": "IES JOAN COROMINES",
+                "direccion": "MARÍTIM, 5",
+                "familiaId": null,
+                "numPlazas": 228,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12003390&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "BENICARLÓ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.426943,
+                    40.41428
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210950,
+                "codCentro": "46020479",
+                "nombreCentro": "IES JOAN FUSTER",
+                "direccion": "ENRIC SOLER I GODES, S/N",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46020479&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "BELLREGUARD"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.166297,
+                    38.944916
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209114,
+                "codCentro": "46012999",
+                "nombreCentro": "IES JOANOT MARTORELL",
+                "direccion": "CIUDAD DEL APRENDIZ, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46012999&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.390365,
+                    39.440536
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 197282,
+                "codCentro": "03001881",
+                "nombreCentro": "IES JORGE JUAN",
+                "direccion": "WENCESLAO FERNÁNDEZ FLORES, 2",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03001881&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.493033,
+                    38.349339
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210776,
+                "codCentro": "46019763",
+                "nombreCentro": "IES JOSÉ BALLESTER GOZALVO",
+                "direccion": "PINTOR ALEMANY, S/N",
+                "familiaId": null,
+                "numPlazas": 80,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46019763&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.379586,
+                    39.496557
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207101,
+                "codCentro": "46005132",
+                "nombreCentro": "IES JOSÉ RODRIGO BOTET",
+                "direccion": "SANTOS JUSTO Y PASTOR, 70",
+                "familiaId": null,
+                "numPlazas": 180,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46005132&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "MANISES"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.470862,
+                    39.494636
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209105,
+                "codCentro": "46012963",
+                "nombreCentro": "IES JUAN DE GARAY",
+                "direccion": "JUAN DE GARAY, 25",
+                "familiaId": null,
+                "numPlazas": 380,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 4,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46012963&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.395679,
+                    39.454851
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200474,
+                "codCentro": "03014851",
+                "nombreCentro": "IES LA ENCANTÁ",
+                "direccion": "RUBÉN DARÍO, S/N",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014851&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ROJALES"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.720087,
+                    38.090634
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200069,
+                "codCentro": "03013339",
+                "nombreCentro": "IES LA MAR",
+                "direccion": "AUGUSTA, 2",
+                "familiaId": null,
+                "numPlazas": 168,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03013339&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "XÀBIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.178624,
+                    38.788705
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198476,
+                "codCentro": "03006761",
+                "nombreCentro": "IES LA MOLA",
+                "direccion": "PÉREZ GALDÓS, 1",
+                "familiaId": null,
+                "numPlazas": 144,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03006761&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "NOVELDA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.757652,
+                    38.386071
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210251,
+                "codCentro": "46017675",
+                "nombreCentro": "IES LA SÈNIA",
+                "direccion": "ESCULTOR JOSÉ CAPUZ, 96",
+                "familiaId": null,
+                "numPlazas": 192,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46017675&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "PAIPORTA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.415603,
+                    39.423091
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203597,
+                "codCentro": "12005544",
+                "nombreCentro": "IES LA VALL D'ALBA",
+                "direccion": "CONSELLERIA DE CULTURA I EDUCACIÓ, S/N",
+                "familiaId": null,
+                "numPlazas": 96,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005544&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "VALL D'ALBA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.034204,
+                    40.181267
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210890,
+                "codCentro": "46020273",
+                "nombreCentro": "IES LA VALL DE SEGÓ",
+                "direccion": "DE QUARTELL, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46020273&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "BENIFAIRÓ DE LES VALLS"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.26511,
+                    39.733545
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211565,
+                "codCentro": "46022543",
+                "nombreCentro": "IES LA VEREDA",
+                "direccion": "ISABEL DE VILLENA, 1",
+                "familiaId": null,
+                "numPlazas": 216,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022543&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "POBLA DE VALLBONA (LA)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.5398,
+                    39.58626
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200558,
+                "codCentro": "03015117",
+                "nombreCentro": "IES L'ARABÍ",
+                "direccion": "DE LA CONSTITUCIÓ, S/N",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015117&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALFÀS DEL PI (L')"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.097042,
+                    38.576294
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199508,
+                "codCentro": "03011070",
+                "nombreCentro": "IES LAS ESPEÑETAS",
+                "direccion": "LOS RUISES, 2",
+                "familiaId": null,
+                "numPlazas": 168,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03011070&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ORIHUELA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.953655,
+                    38.090395
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210299,
+                "codCentro": "46017882",
+                "nombreCentro": "IES LES ALFÀBEGUES",
+                "direccion": "MARIANA DE SAN SIMEÓN, S/N",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46017882&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "BÉTERA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.462713,
+                    39.595747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207371,
+                "codCentro": "46006100",
+                "nombreCentro": "IES L'ESTACIÓ",
+                "direccion": "ESTACIÓN, S/N",
+                "familiaId": null,
+                "numPlazas": 258,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46006100&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ONTINYENT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.604568,
+                    38.809926
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200486,
+                "codCentro": "03014897",
+                "nombreCentro": "IES LOS MONTESINOS - REMEDIOS MUÑOZ",
+                "direccion": "DIEGO MONTESINOS, 8",
+                "familiaId": null,
+                "numPlazas": 72,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014897&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "MONTESINOS (LOS)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.747532,
+                    38.026129
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 197828,
+                "codCentro": "03003978",
+                "nombreCentro": "IES MACIÀ ABELA",
+                "direccion": "MANUEL SANCHIS GUARNER, S/N",
+                "familiaId": null,
+                "numPlazas": 270,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03003978&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "CREVILLENT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.801857,
+                    38.252808
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203372,
+                "codCentro": "12004400",
+                "nombreCentro": "IES MAESTRAT",
+                "direccion": "FONT DE MORELLA, S/N",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12004400&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "SANT MATEU"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.175502,
+                    40.466115
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 207845,
+                "codCentro": "46007943",
+                "nombreCentro": "IES MANUEL SANCHIS GUARNER",
+                "direccion": "CID CAMPEADOR, 2",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46007943&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "SILLA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.412628,
+                    39.36493
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211436,
+                "codCentro": "46022129",
+                "nombreCentro": "IES MANUEL SANCHIS GUARNER",
+                "direccion": "JAUME I, 46",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022129&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CASTELLÓ DE RUGAT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.382805,
+                    38.87103
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198959,
+                "codCentro": "03008915",
+                "nombreCentro": "IES MARCOS ZARAGOZA",
+                "direccion": "FERROCARRIL, 22",
+                "familiaId": null,
+                "numPlazas": 360,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03008915&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "VILA JOIOSA (LA)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.241195,
+                    38.50478
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199901,
+                "codCentro": "03012736",
+                "nombreCentro": "IES MARE NOSTRUM",
+                "direccion": "PANAMÁ, 22",
+                "familiaId": null,
+                "numPlazas": 755,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 4,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03012736&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.512817,
+                    38.333005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206846,
+                "codCentro": "46004221",
+                "nombreCentro": "IES MARIA ENRÍQUEZ",
+                "direccion": "LITERATO AZORÍN, 1",
+                "familiaId": null,
+                "numPlazas": 435,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46004221&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "GANDIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.181972,
+                    38.960043
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200582,
+                "codCentro": "03015181",
+                "nombreCentro": "IES MARINA BAIXA",
+                "direccion": "DOCTOR FLEMING, 3",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015181&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "VILA JOIOSA (LA)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.241152,
+                    38.502408
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203522,
+                "codCentro": "12005261",
+                "nombreCentro": "IES MATILDE SALVADOR",
+                "direccion": "CASALDUCH, 120",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005261&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.048076,
+                    39.97347
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200795,
+                "codCentro": "03015907",
+                "nombreCentro": "IES MEDITERRÁNEO",
+                "direccion": "DE TENERIFE, 1",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015907&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "TORREVIEJA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.666249,
+                    37.991151
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211778,
+                "codCentro": "46023250",
+                "nombreCentro": "IES MESTRE RAMÓN ESTEVE",
+                "direccion": "CALVARIO, S/N",
+                "familiaId": null,
+                "numPlazas": 222,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46023250&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CATADAU"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.567775,
+                    39.277879
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 208133,
+                "codCentro": "46008972",
+                "nombreCentro": "IES MIGUEL BALLESTEROS VIANA",
+                "direccion": "VENTA DEL MORO, 1",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46008972&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "UTIEL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.209773,
+                    39.572728
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203129,
+                "codCentro": "12003444",
+                "nombreCentro": "IES MIRALCAMP",
+                "direccion": "DEL MIRALCAMP, 126",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12003444&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "VILA-REAL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.115495,
+                    39.938147
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200384,
+                "codCentro": "03014551",
+                "nombreCentro": "IES MUTXAMEL",
+                "direccion": "MONTDÚVER, S/N",
+                "familiaId": null,
+                "numPlazas": 252,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014551&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "MUTXAMEL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.447315,
+                    38.407376
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200378,
+                "codCentro": "03014526",
+                "nombreCentro": "IES NIT DE L'ALBÀ",
+                "direccion": "DE LA LLIBERTAT, S/N",
+                "familiaId": null,
+                "numPlazas": 72,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014526&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.714418,
+                    38.263221
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200498,
+                "codCentro": "03014939",
+                "nombreCentro": "IES NOU DERRAMADOR",
+                "direccion": "DE LA INDUSTRIA, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014939&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "IBI"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.585467,
+                    38.619461
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210365,
+                "codCentro": "46018138",
+                "nombreCentro": "IES ORRIOLS",
+                "direccion": "SANTIAGO RUSIÑOL, S/N",
+                "familiaId": null,
+                "numPlazas": 32,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46018138&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.366964,
+                    39.496135
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199256,
+                "codCentro": "03010144",
+                "nombreCentro": "IES PEDRO IBARRA RUIZ",
+                "direccion": "ABOGADOS DE ATOCHA, 2",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03010144&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.684674,
+                    38.26269
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211994,
+                "codCentro": "46023948",
+                "nombreCentro": "IES PERE D'ESPLUGUES",
+                "direccion": "METGE JULIO SANCHIS, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46023948&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "POBLA LLARGA (LA)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.476563,
+                    39.087977
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199253,
+                "codCentro": "03010132",
+                "nombreCentro": "IES PERE MARIA ORTS I BOSCH",
+                "direccion": "DE LA BARCA DEL BOU (SALT DE L'AIGUA), 6",
+                "familiaId": null,
+                "numPlazas": 306,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03010132&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "BENIDORM"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.121464,
+                    38.553787
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200333,
+                "codCentro": "03014371",
+                "nombreCentro": "IES POETA PACO MOLLÀ",
+                "direccion": "REINA SOFÍA, S/N",
+                "familiaId": null,
+                "numPlazas": 434,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 4,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014371&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "PETRER"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.779257,
+                    38.479008
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211427,
+                "codCentro": "46022099",
+                "nombreCentro": "IES PORÇONS",
+                "direccion": "JULIÁN JUAN MOMPÓ, 3",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022099&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "AIELO DE MALFERIT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.595665,
+                    38.881554
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203633,
+                "codCentro": "12005660",
+                "nombreCentro": "IES PROFESSOR BROCH I LLOP",
+                "direccion": "EUROPA, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12005660&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "VILA-REAL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.100486,
+                    39.92925
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200531,
+                "codCentro": "03015038",
+                "nombreCentro": "IES RADIO EXTERIOR",
+                "direccion": "DEPORTISTA JOSÉ BAÑÓN, S/N",
+                "familiaId": null,
+                "numPlazas": 48,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03015038&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ALACANT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.421407,
+                    38.36481
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 205934,
+                "codCentro": "46000705",
+                "nombreCentro": "IES REI EN JAUME",
+                "direccion": "DE GANDIA, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46000705&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALZIRA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.430059,
+                    39.146907
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206657,
+                "codCentro": "46003512",
+                "nombreCentro": "IES RICARDO MARÍN IBÁNEZ",
+                "direccion": "PUERTA ZAFA, 36",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46003512&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CHESTE"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.68634,
+                    39.497997
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209822,
+                "codCentro": "46016038",
+                "nombreCentro": "IES SALVADOR GADEA",
+                "direccion": "DE LES ENCREULLADES, 4",
+                "familiaId": null,
+                "numPlazas": 204,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46016038&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALDAIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.470327,
+                    39.459581
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 198854,
+                "codCentro": "03008423",
+                "nombreCentro": "IES SAN VICENTE",
+                "direccion": "C. LILLO JUAN, 128",
+                "familiaId": null,
+                "numPlazas": 678,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03008423&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "SANT VICENT DEL RASPEIG"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.529587,
+                    38.404005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 206066,
+                "codCentro": "46001199",
+                "nombreCentro": "IES SANT VICENT FERRER",
+                "direccion": "PARQUE SALVADOR CASTELL, 16",
+                "familiaId": null,
+                "numPlazas": 420,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46001199&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "ALGEMESÍ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.437372,
+                    39.185749
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211595,
+                "codCentro": "46022646",
+                "nombreCentro": "IES SERPIS",
+                "direccion": "JOSÉ MARÍA HARO, 63",
+                "familiaId": null,
+                "numPlazas": 603,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022646&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "VALÈNCIA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.337535,
+                    39.473115
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203369,
+                "codCentro": "12004394",
+                "nombreCentro": "IES SERRA D'IRTA",
+                "direccion": "FRANCESC SOSPEDRA, 2",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12004394&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "ALCALÀ DE XIVERT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.222643,
+                    40.302857
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200465,
+                "codCentro": "03014836",
+                "nombreCentro": "IES SERRA MARIOLA",
+                "direccion": "L'ORXA, 1",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014836&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "MURO DE ALCOY"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.43072,
+                    38.785303
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210572,
+                "codCentro": "46019015",
+                "nombreCentro": "IES SERRA PERENXISA",
+                "direccion": "CORONA D'ARAGÓ, 1",
+                "familiaId": null,
+                "numPlazas": 366,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46019015&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "TORRENT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.46635,
+                    39.429473
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200039,
+                "codCentro": "03013224",
+                "nombreCentro": "IES SEVERO OCHOA",
+                "direccion": "ILLUECA, 28",
+                "familiaId": null,
+                "numPlazas": 651,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03013224&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.715688,
+                    38.280357
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 210953,
+                "codCentro": "46020480",
+                "nombreCentro": "IES SIVERA FONT",
+                "direccion": "JAUME I, S/N",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46020480&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CANALS"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.580897,
+                    38.970537
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200150,
+                "codCentro": "03013728",
+                "nombreCentro": "IES THIAR",
+                "direccion": "PILAR PÉREZ AGUIRRE, 16",
+                "familiaId": null,
+                "numPlazas": 132,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03013728&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "PILAR DE LA HORADADA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.788486,
+                    37.856986
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 199913,
+                "codCentro": "03012773",
+                "nombreCentro": "IES TIRANT LO BLANC",
+                "direccion": "PEDRO JUAN PERPIÑAN, 91",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03012773&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ELX"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.715249,
+                    38.26012
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200999,
+                "codCentro": "03016596",
+                "nombreCentro": "IES TORREVIGÍA",
+                "direccion": "EFRÉN GUTIÉRREZ MATEO (APDO. 730), S/N",
+                "familiaId": null,
+                "numPlazas": 186,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03016596&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "TORREVIEJA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.695604,
+                    37.998764
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211682,
+                "codCentro": "46022920",
+                "nombreCentro": "IES VELES E VENTS",
+                "direccion": "DE LOS CANTAROS, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46022920&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "TORRENT"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.476773,
+                    39.423448
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203315,
+                "codCentro": "12004205",
+                "nombreCentro": "IES VICENT CASTELL I DOMÉNECH",
+                "direccion": "ILLA BALEATO, 18",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12004205&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "CASTELLÓ DE LA PLANA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.053065,
+                    39.975188
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 209741,
+                "codCentro": "46015721",
+                "nombreCentro": "IES VICENTE GANDIA",
+                "direccion": "DE LA RONDA, S/N",
+                "familiaId": null,
+                "numPlazas": 36,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 1,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=46015721&lang=va",
+                "nombreProvincia": "València",
+                "nombreMunicipio": "CASTELLÓ"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.510867,
+                    39.073459
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 200456,
+                "codCentro": "03014800",
+                "nombreCentro": "IES VILLA DE ASPE",
+                "direccion": "CANTAL DE ERAES, S/N",
+                "familiaId": null,
+                "numPlazas": 180,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 3,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=03014800&lang=va",
+                "nombreProvincia": "Alacant",
+                "nombreMunicipio": "ASPE"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.76773,
+                    38.336388
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 203273,
+                "codCentro": "12004011",
+                "nombreCentro": "IES XIMÉN D'URREA",
+                "direccion": "DE CASTELLÓN, S/N",
+                "familiaId": null,
+                "numPlazas": 84,
+                "numAreasProfesionales": 1,
+                "numTiposAcceso": 2,
+                "urlWeb": "https://xacen.gva.es/xacen-frontend/centro?codigoCentro=12004011&lang=va",
+                "nombreProvincia": "Castelló",
+                "nombreMunicipio": "ALCORA (L')"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.207453,
+                    40.071651
+                ]
+            }
+        }
+    ],
+    "crs": {
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        },
+        "type": "name"
+    }
+}
