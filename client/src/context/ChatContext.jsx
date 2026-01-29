@@ -36,6 +36,7 @@ export const ChatProvider = ({children}) => {
                 setMessages(currentChat.messages || []);
             }
         }
+        // eslint-disable-next-line
     }, [selectedChatId]);
 
 
