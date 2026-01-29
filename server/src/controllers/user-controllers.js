@@ -48,8 +48,8 @@ export const userSignUp = async (req, res) => {
             })
         }
 
-        const salt = genSaltSync(10)
-        const passwordHash = hashSync(password, salt)
+        const salt = genSaltSync(10) //bcrypt
+        const passwordHash = hashSync(password, salt) //bcrypt
         /* console.log(passwordHash) */
 
         const user = new User ({

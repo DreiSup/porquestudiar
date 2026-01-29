@@ -52,12 +52,10 @@ export const getUniqueChat = async (req, res) => {
 //POST
 export const createNewChat = async (req, res) => {
     try {
-        console.log("YOU ARE TRYNG TO CREATE A NEW CHAT")
+        /* console.log("YOU ARE TRYNG TO CREATE A NEW CHAT") */
         const user = await User.findById(res.locals.jwtData.id);
         if (!user) { return res.status(401).json({ message: "User not found"}) }
-
-        console.log(user.chats)
-
+        /* console.log(user.chats) */
         if (user.chats.length >= 5 ) {
             return res.status(403).json({ message: "You have reached the limit of 5 conversations"})
         }
@@ -72,7 +70,6 @@ export const createNewChat = async (req, res) => {
         const newChat = user.chats[user.chats.length - 1]
 
         return res.status(201).json({ chat: newChat})
-
     } catch (error) {
         console.log(error)
         return res.status(500).json({ message: "Error trying to create a new chat"})

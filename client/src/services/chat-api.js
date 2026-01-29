@@ -1,5 +1,4 @@
 import apiClient from "./axios-client"
-
 const api = apiClient
 
 
@@ -31,14 +30,10 @@ export const getUniqueChat = async (chatId) => {
 //POST
 export const createNewChat = async () => {
     try {
-        console.log("creating new chat")
-
+        /* console.log("creating new chat") */
         const res = await api.post("/chat/new")
-
-        console.log(res)
-
+        /* console.log(res) */
         return res
-
     } catch (error) {
         console.log(error)
         return error
@@ -47,10 +42,9 @@ export const createNewChat = async () => {
 
 export const sendChatMessage = async (message, sessionId) => {
     try{
-        console.log("DESDE CHAT-API:", message, sessionId)
+        /* console.log("DESDE CHAT-API:", message, sessionId) */
         const response = await api.post('/chat', { message: message, sessionId: sessionId })
-
-        console.log(response)
+        /* console.log(response) */
         return response.data
     } catch (error) {
         console.log("Something went wrong", error)
@@ -69,7 +63,6 @@ export const changeChatTitle = async (id, editTitle) => {
         console.log(error)
     }
 }
-
 
 
 //DELETE

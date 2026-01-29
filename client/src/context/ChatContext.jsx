@@ -62,13 +62,9 @@ export const ChatProvider = ({children}) => {
     }
 
     const createChat = async () => {
-
         try {
             const data = await createNewChat()
-
-            console.log(data)
-
-
+            /* console.log(data) */
             if (data.status === 403) {
                 toast.error("You have reached your chats limit", {position: "top-left"})
             }
@@ -76,20 +72,11 @@ export const ChatProvider = ({children}) => {
             if (data.status === 201) {
                 const newChat = data.data.chat;
 
-                // 2. Añadimos el chat AL PRINCIPIO de la lista (mejor UX)
                 setChats(prev => [newChat, ...prev]);
-
-                // 3. Seleccionamos el nuevo ID
                 setSelectedChatId(newChat.id);
-
-                // 4. ¡LA CORRECCIÓN! Pasamos el array tal cual (que viene vacío [])
-                // o simplemente forzamos un array vacío limpio:
                 setMessages([]); 
-                
                 toast.success("New conversation created");
             }
-            
-
         } catch (error) {
             console.log("Error creando el chat", error)
         } 
@@ -107,19 +94,12 @@ export const ChatProvider = ({children}) => {
     }
 
     const sendMessage = async (content) => {
-
         if (!selectedChatId) return
-
-        console.log("content:", content)
-
+        /* console.log("content:", content)*/
         const newMsg = {role: "user", content: content}
-
         setMessages(prev => [...(prev || []), newMsg])
-
-        console.log("NEWMSG:", newMsg)
-
+        /* console.log("NEWMSG:", newMsg) */
         setIsLoading(true)
-
         try {
             const data = await sendChatMessage(content, selectedChatId)
             console.log("DATA MESSAGES FROM CHATCONTEXT:", data)
@@ -143,10 +123,8 @@ export const ChatProvider = ({children}) => {
                     ? newTitleFromBackend 
                     : currentChat.title
             }
-
             return [updatedChat, ...otherChats]
         })
-
         } catch (error) {
             console.log("Error trying to send message",error)
         } finally {

@@ -101,11 +101,11 @@ export const AuthProvider = ({children}) => {
     const value = {
         user,
         isLoggedIn,
+        setLoading,
+        loading,
         login,
         signup,
-        logout,
-        setLoading,
-        loading
+        logout
     }
 
     /* console.log("Estado actual - Loading:", loading, "isLoggedIn:", isLoggedIn); */

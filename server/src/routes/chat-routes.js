@@ -10,6 +10,7 @@ chatRoutes.get('/chats', verifyToken, getUserChats)
 chatRoutes.get('/:id', verifyToken, getUniqueChat)
 
 chatRoutes.post('/', verifyToken, postMessage)
+
 chatRoutes.post('/new', verifyToken, createNewChat)
 
 

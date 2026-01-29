@@ -72,18 +72,14 @@ const SideBar = () => {
 
   const handleNewChat = async () => {
     try {
-      console.log("creando nuevo chat")
-
+      /* console.log("creando nuevo chat") */
       const data = await chatContext?.createChat()
 
       if (data && data.chat) {
-        
         chatContext?.setSelectedChatID(data.chat._id)
         chatContext?.setMessages([])
       }
-
-      console.log(chatContext?.selectedChatId)
-
+      /* console.log(chatContext?.selectedChatId) */
     } catch (error) {
       console.log(error)
     }
