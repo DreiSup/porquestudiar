@@ -35,10 +35,13 @@ export const createNewChat = async () => {
 
         const res = await api.post("/chat/new")
 
-        return res.data
+        console.log(res)
+
+        return res
 
     } catch (error) {
         console.log(error)
+        return error
     }
 } 
 
@@ -46,6 +49,8 @@ export const sendChatMessage = async (message, sessionId) => {
     try{
         console.log("DESDE CHAT-API:", message, sessionId)
         const response = await api.post('/chat', { message: message, sessionId: sessionId })
+
+        console.log(response)
         return response.data
     } catch (error) {
         console.log("Something went wrong", error)

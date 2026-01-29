@@ -39,7 +39,7 @@ const SignUp = (className, ...props) => {
       //Validación básica cliente
       if (formData.password !== formData.confirmpassword) {
           setErrorMessage("Las contraseñas no coinciden")
-          toast.error(errorMessage)
+          toast.error("Passwords do not match")
           return 
       }
 
@@ -64,7 +64,7 @@ const SignUp = (className, ...props) => {
           console.log(error.status)
           if (error && error.status == 409) {
             setErrorMessage('Este email ya está registrado')
-            toast.error(errorMessage)
+            toast.error("This email is already registered")
           } else{
             console.log("Ha habido un error al registrarte: ", error)
           }
@@ -188,9 +188,6 @@ const SignUp = (className, ...props) => {
             and <a href="#">Privacy Policy</a>.
           </FieldDescription>
         </div>
-        <Button variant="outline" onClick={() => toast("hey", {position: "top-center"})}>
-          toast
-        </Button>
       </div>
     </div>
   )

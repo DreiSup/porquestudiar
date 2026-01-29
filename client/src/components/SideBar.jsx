@@ -19,6 +19,7 @@ import { DropdownMenuTrigger } from "./ui/dropdown-menu"
 import { useAuth } from "@/context/AuthContext"
 import { Button } from "./ui/button"
 import { useEffect, useState } from "react"
+import { NavUser } from "./NavUser"
 
 const SideBar = () => {
 
@@ -109,8 +110,7 @@ const SideBar = () => {
             chatContext?.setChats(chatsFromServer)
           } else {
           // B) Si NO existen chats, creamos uno nuevo automáticamente
-          console.log("No hay chats, creando uno por defecto...");
-          handleNewChat(); // Reutilizamos tu función de crear
+          console.log("No hay chats");
         } 
 
         } catch (error) {
@@ -134,18 +134,6 @@ const SideBar = () => {
       console.log(error)
     }
   }
-
-  const handleLogOut = async (e) => {
-        e.preventDefault()
-
-        try {
-          const res = await auth?.logout()
-          console.log(res)
-          return res
-        } catch (error) {
-          console.log(error)        
-        }
-    }
 
     const getInitials = () => {
         if (!auth?.user || !auth?.user.name) return "U"; // U de User por defecto
@@ -179,7 +167,7 @@ const SideBar = () => {
                 <SidebarMenuItem key={chat._id}>
                   <SidebarMenuButton 
                     onClick={()=> chatContext?.selectChat(chat.id)}
-                    isActive={chatContext?.selectedChatId === chat._id}
+                    isActive={chatContext?.selectedChatId === chat.id}
                     className="cursor-pointer"
                   >
                     <MessageSquare className="size-4" />
@@ -195,8 +183,11 @@ const SideBar = () => {
                         className="bg-transparent border border-gray-600 rounded px-1 w-full text-white focus:outline-none focus:border-amber-600 h-6 text-sm"
                       />
                     ) : (
-                      <span className="truncate font-medium">
-                          {chat.title || "Conversación sin título"}
+                      <span
+                        className="truncate font-medium animate-in fade-in slide-in-from-left-1 duration-1000" 
+                        key={chat.title}
+                      >
+                          {chat.title || "No title conversation"}
                       </span>
                     )}
                   </SidebarMenuButton>
@@ -207,20 +198,17 @@ const SideBar = () => {
                         </SidebarMenuAction>
                      </DropdownMenuTrigger>
                      <DropdownMenuContent side="right" align="start" className="bg-black border-black text-white shadow-xl">
-                        <DropdownMenuItem>
-                          <span
+                        <DropdownMenuItem 
                             onClick={(e) => startEditing(chat, e)}
                             className="cursor-pointer"
-                          >
-                            Edit Title
-                          </span>
+                        >
+                          <span>Edit Title</span>
                         </DropdownMenuItem>
-                        <DropdownMenuItem>
-                          <span
-                            onClick={(e) => handleDeleteChat(chat.id, e)}
-                          >
-                            Delete
-                          </span>
+                        <DropdownMenuItem 
+                          onClick={(e) => handleDeleteChat(chat.id, e)}
+                          className="cursor-pointer"  
+                        >
+                          <span>Delete</span>
                         </DropdownMenuItem>
                      </DropdownMenuContent>
                   </DropdownMenu>
@@ -231,37 +219,7 @@ const SideBar = () => {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        {auth?.isLoggedIn && auth?.user
-          ? 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
-                  <Avatar>
-                    <AvatarImage src={auth?.user?.profilePic} alt="shadcn" />
-                    <AvatarFallback>LR</AvatarFallback>
-                  </Avatar>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuGroup>
-                  <DropdownMenuItem>
-                    <BadgeCheckIcon />
-                    {auth?.user?.name}
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <BadgeCheckIcon />
-                    {auth?.user?.email}
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={handleLogOut}>
-                  <LogOutIcon />
-                  Sign Out
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-          : <></>}
+        {auth?.user && <NavUser user={auth?.user} />}
       </SidebarFooter>              
     </Sidebar>
   )

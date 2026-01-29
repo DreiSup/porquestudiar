@@ -104,7 +104,7 @@ export const postMessage = async (req, res) => {
 
 
             //LOGICA QUE VERIFICA SI ES EL 1ER MENSAJE, Y CAMBIA chat.title
-            if (chat.messages.length <= 1 || chat.title === "Nuevo Chat" || chat.title === "Conversación sin título") {
+            if (chat.messages.length <= 1 || chat.title === "Nuevo Chat" || chat.title === "New conversation") {
             
                 // Dividimos el mensaje en palabras, quitando espacios extra
                 const words = message.trim().split(/\s+/);
@@ -136,7 +136,8 @@ export const postMessage = async (req, res) => {
             //Devolvemos la respuesta de Bedrock
             res.json({
                 ok: true,
-                messages: chat.messages
+                messages: chat.messages,
+                chatTitle: chat.title
             })
     
             console.log("!!!   DEBUG   !!!: esto es responseAI:", responseAI)
@@ -151,7 +152,7 @@ export const postMessage = async (req, res) => {
         }
 }
 
-export const generateChatCompletion = async (req, res) => {
+/* export const generateChatCompletion = async (req, res) => {
     const {message, chatId} = req.body
 
     try {
@@ -166,7 +167,6 @@ export const generateChatCompletion = async (req, res) => {
 
         currentChat.messages.push({role: "user", content: message})
 
-        /* const response = await  */
         const aiResponse = "Esta es la respuesta simulada de la IA"
 
         currentChat.messages.push({role: "assistant", content: aiResponse})
@@ -179,7 +179,7 @@ export const generateChatCompletion = async (req, res) => {
         console.log(error);
         return res.status(500).json({ message: "Error trying to communicate"})
     }
-}
+} */
 
 
 //PUT

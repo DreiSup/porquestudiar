@@ -19,7 +19,7 @@ export const AuthProvider = ({children}) => {
     useEffect(() => {
         async function checkStatus() {
             try {
-                setLoading(true)
+                
                 const data = await checkAuthStatus()
                 console.log("Data del useEffect situado en AuthContext:", data)
                 if (data) {
@@ -31,9 +31,7 @@ export const AuthProvider = ({children}) => {
                 console.log("Sesión no válida o expirada: ", error.message)
                 setIsLoggedIn(false)
                 setUser(null)
-            } finally {
-                setLoading(false)
-            }
+            } 
         }
         checkStatus()
     }, [])
@@ -45,8 +43,6 @@ export const AuthProvider = ({children}) => {
 
 
     const login = async (email, password) => {
-        
-        setLoading(true)
         
         try {
             const response = await loginUser(email, password)
@@ -63,13 +59,11 @@ export const AuthProvider = ({children}) => {
         } catch (error) {
             console.log(error)
             return null
-        } finally {
-            setLoading(false)
-        }
+        } 
     }
     
     const signup = async (name, email, password) => {
-        setLoading(true)
+
         try {
             const data = await signupUser(name, email, password)
             if (data & data.user) {
@@ -80,14 +74,12 @@ export const AuthProvider = ({children}) => {
         } catch (error) {
             console.log("Somehting went wrong:", error)
             throw error;
-        } finally {
-            setLoading(false)
-        }
+        } 
     }
 
     const logout = async () => {
-        setLoading(true)
 
+        setLoading(true)
         try {
             const data = await logoutUser()
             console.log(data)

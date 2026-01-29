@@ -19,16 +19,6 @@ const Chat = () => {
       const auth = useAuth()
       const chatContext = useChat()
     
-      /* useEffect(() => {
-        const uniqueId = `sesion-${crypto.randomUUID()}`
-        setSessionId(uniqueId);
-        console.log("SessionID generado: ", uniqueId)
-      }, []) */
-      
-      /* useEffect(() => {
-        console.log("Esto es lo que contiene auth:", auth);
-      }, [auth]) */
-    
       useEffect(() => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth"})
       })
@@ -53,6 +43,8 @@ const Chat = () => {
     
       useEffect(() => {
         console.log("ESTO ES EL USESTATE DE CHATS:",chatContext?.chats)
+        console.log("Use effect, este es el chat renderizado: ", chatContext?.selectedChatId, "Y estos son los mensajes: ", chatContext?.messages);
+        
       }, [chatContext?.chats])
       
     
@@ -81,8 +73,8 @@ const Chat = () => {
                       >
                         <div className={`max-w-[75%] p-3 rounded-2xl shadow-md my-3 ${
                           isUser
-                          ? 'bg-neutral-800 text-white rounded-br-none'
-                          : 'bg-neutral-800 text-gray-200 border border-neutral-700 rounded-bl-none'
+                          ? 'bg-zinc-700 text-white rounded-br-none'
+                          : 'bg-zinc-900 text-gray-200 border border-zinc-700 rounded-bl-none'
                         }`}>
                           <p className='text-sm whitespace-pre-wrap'>
                             {msg.content}
@@ -98,9 +90,9 @@ const Chat = () => {
                       <div className="bg-black border border-gray-900 p-4 rounded-2xl rounded-bl-none shadow-md">
                       <div className="flex gap-1.5 items-center">
                       {/* Animación de puntos usando Tailwind */}
-                            <div className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                            <div className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                            <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+                            <div className="w-1 h-1 bg-white rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                            <div className="w-1 h-1 bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                            <div className="w-1 h-1 bg-white rounded-full animate-bounce"></div>
                           </div>
                         </div>
                       </div>

@@ -144,11 +144,13 @@ export const verifyUser = async (req, res) => {
         if (user.chats.length === 0) {
             user.chats.push({
                 title: "Welcome",
-                message: [{
+                messages: [{
                     role: "assistant",
                     content: "¡Hola! Soy tu asistente de estudio. ¿En qué puedo ayudarte?"
                 }]
             })
+
+            user.save()
         }
 
         return res

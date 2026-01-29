@@ -5,11 +5,9 @@ import Chat from './pages/Chat';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
-import { useAuth } from './context/AuthContext';
 import Experiment from './pages/Experiment';
 import { Toaster } from 'sonner';
 import { ProtectedRoute } from './components/ProtectedRoute';
-import LoadingScreen from './components/LoadingScreen';
 
 function App() {
 
@@ -26,7 +24,7 @@ function App() {
                 <Chat/>
               </ProtectedRoute>
           }/>
-          <Route path='/experiment' element={<Experiment/>}/>
+          {/* <Route path='/experiment' element={<Experiment/>}/> */}
           <Route path='/*' element={<NotFound/>}/>
         </Routes>
         <Toaster theme='dark' position='top-center'/>

@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { useAuth } from "./AuthContext"
 import { changeChatTitle, createNewChat, deleteOneChat, getUniqueChat, getUserChats, sendChatMessage } from "@/services/chat-api"
-import { useNavigate } from "react-router-dom"
+import { toast } from "sonner"
 
 const ChatContext = createContext(null)
 
@@ -9,7 +9,6 @@ export const ChatProvider = ({children}) => {
 
     const {user} = useAuth()
 
-    const navigate = useNavigate()
 
     const [chats, setChats] = useState([]);
     const [selectedChatId, setSelectedChatId] = useState(null);
@@ -24,10 +23,20 @@ export const ChatProvider = ({children}) => {
             console.log(user?.chats)
             const sorted = [...user.chats].sort((a,b) => new Date(b.updatedAt) - new Date(a.updatedAt));
             setChats(sorted);
-        } else {
-            /* navigate("/login") */
-        }
+        } 
     }, [user])
+
+    useEffect(() => {
+        if (selectedChatId && chats.length > 0) {
+            // Buscamos el chat que coincida (revisando ambos por si acaso)
+            const currentChat = chats.find(c => c.id === selectedChatId || c._id === selectedChatId);
+            
+            if (currentChat) {
+                console.log("Sincronizando mensajes para el chat:", selectedChatId);
+                setMessages(currentChat.messages || []);
+            }
+        }
+    }, [selectedChatId]);
 
 
     const getOneChat = async (chatId) => {
@@ -55,16 +64,34 @@ export const ChatProvider = ({children}) => {
 
         try {
             const data = await createNewChat()
-            setChats([...chats, data.chat])
-            setSelectedChatId(data.chat._id)
-            setMessages([])
-            console.log(chats)
+
+            console.log(data)
+
+
+            if (data.status === 403) {
+                toast.error("You have reached your chats limit", {position: "top-left"})
+            }
+
+            if (data.status === 201) {
+                const newChat = data.data.chat;
+
+                // 2. Añadimos el chat AL PRINCIPIO de la lista (mejor UX)
+                setChats(prev => [newChat, ...prev]);
+
+                // 3. Seleccionamos el nuevo ID
+                setSelectedChatId(newChat.id);
+
+                // 4. ¡LA CORRECCIÓN! Pasamos el array tal cual (que viene vacío [])
+                // o simplemente forzamos un array vacío limpio:
+                setMessages([]); 
+                
+                toast.success("New conversation created");
+            }
+            
 
         } catch (error) {
             console.log("Error creando el chat", error)
-        } finally {
-            setIsLoading(false)
-        }
+        } 
     }
 
     const selectChat = async (chatId) => {
@@ -89,6 +116,8 @@ export const ChatProvider = ({children}) => {
         setMessages(prev => [...(prev || []), newMsg])
 
         console.log("NEWMSG:", newMsg)
+
+        setIsLoading(true)
 
         try {
             const data = await sendChatMessage(content, selectedChatId)
@@ -119,6 +148,8 @@ export const ChatProvider = ({children}) => {
 
         } catch (error) {
             console.log("Error trying to send message",error)
+        } finally {
+            setIsLoading(false)
         }
     }
 

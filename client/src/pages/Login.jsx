@@ -13,10 +13,11 @@ import { Input } from "@/components/ui/input"
 import { useAuth } from "@/context/AuthContext"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import { toast } from "sonner"
 
 const LogIn = (className, ...props) => {
 
-  const [error, setError] = useState("")
+  /* const [error, setError] = useState("") */
   const [formData, setFormData] = useState({
       email: "",
       password: "",
@@ -31,7 +32,7 @@ const LogIn = (className, ...props) => {
 
   const handleSubmit = async (e) => {
       e.preventDefault();
-      setError("")
+      /* setError("") */
 
       console.log("handleSubmit for Login")
 
@@ -44,7 +45,7 @@ const LogIn = (className, ...props) => {
           if (res) {
               navigate("/chat")
           } else {
-              setError("Credenciales incorrectas")
+              toast.error("Incorrect credentials")
           }
 
       } catch (error) {

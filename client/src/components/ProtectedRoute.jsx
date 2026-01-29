@@ -1,5 +1,5 @@
+import { useEffect, useRef } from "react";
 import { useAuth } from "@/context/AuthContext";
-import { useEffect } from "react";
 import { Navigate, Outlet, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
@@ -7,34 +7,50 @@ export const ProtectedRoute = ({ children }) => {
     const { isLoggedIn, loading } = useAuth();
     const navigate = useNavigate()
 
+    const wasLoggedIn = useRef(isLoggedIn);
+
     useEffect(() => {
-        if (!loading && !isLoggedIn) {
+        // 1. Si todavía está cargando, no hacemos nada
+        if (loading) return;
 
+        // 2. CASO: Acceso denegado (No estaba logueado y sigue sin estarlo)
+        if (!isLoggedIn && !wasLoggedIn.current) {
+            console.log("Acceso no autorizado");
+            
             toast.error("Access denied", {
-                description:"You have to log in first. Redirecting...",
-                duration: 6000
-            })
-            const timer = setTimeout(() => {
-                navigate("/login")
-            }, 2000)
+                description: "You have to log in first. Redirecting...",
+                duration: 4000
+            });
 
-            return () => {
-                clearTimeout(timer)
-                
-            }
+            const timer = setTimeout(() => {
+                navigate("/login");
+            }, 2000);
+
+            return () => clearTimeout(timer);
         }
-    }, [isLoggedIn, loading, navigate])
+
+        // 3. CASO: Logout manual (Estaba logueado y ahora no)
+        if (!isLoggedIn && wasLoggedIn.current) {
+            console.log("Logout detectado, redirigiendo sin error");
+            navigate("/login");
+            return;
+        }
+
+        // Actualizamos el ref para la próxima ejecución
+        wasLoggedIn.current = isLoggedIn;
+
+    }, [isLoggedIn, loading, navigate]);
 
 
     // 1. ESTADO DE CARGA: Mientras verificamos la cookie/token
     // Es vital mostrar esto para que no redirija a login erróneamente mientras carga
-    if (loading) {
+    /* if (loading) {
         return (
             <div className="flex h-screen w-full items-center justify-center bg-slate-950">
                 <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500"></div>
             </div>
         );
-    }
+    } */
 
     // 2. NO LOGUEADO: Redirigir al Login
     // 'replace' evita que el usuario pueda volver atrás con el botón del navegador
